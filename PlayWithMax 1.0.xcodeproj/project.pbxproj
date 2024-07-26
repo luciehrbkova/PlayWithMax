@@ -24,6 +24,7 @@
 		18944EF62C53E6830055DF9F /* pig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944EEA2C53E6830055DF9F /* pig.mp3 */; };
 		18944EF72C53E6830055DF9F /* rabbit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944EEB2C53E6830055DF9F /* rabbit.mp3 */; };
 		18944EF82C53E6830055DF9F /* sheep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944EEC2C53E6830055DF9F /* sheep.mp3 */; };
+		18944EFA2C53E70B0055DF9F /* GuessGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944EF92C53E70B0055DF9F /* GuessGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		18944EEA2C53E6830055DF9F /* pig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pig.mp3; sourceTree = "<group>"; };
 		18944EEB2C53E6830055DF9F /* rabbit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rabbit.mp3; sourceTree = "<group>"; };
 		18944EEC2C53E6830055DF9F /* sheep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sheep.mp3; sourceTree = "<group>"; };
+		18944EF92C53E70B0055DF9F /* GuessGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */,
 				18944E622C52FC3B0055DF9F /* AudioPlayer.swift */,
 				18944E532C52ED8D0055DF9F /* ContentView.swift */,
+				18944EF92C53E70B0055DF9F /* GuessGameView.swift */,
 				18944E552C52ED8F0055DF9F /* Assets.xcassets */,
 				18944E572C52ED8F0055DF9F /* Preview Content */,
 				18944E782C530C620055DF9F /* Model.swift */,
@@ -198,6 +201,7 @@
 				18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */,
 				18944E522C52ED8D0055DF9F /* PlayWithMax_1_0App.swift in Sources */,
 				18944E632C52FC3B0055DF9F /* AudioPlayer.swift in Sources */,
+				18944EFA2C53E70B0055DF9F /* GuessGameView.swift in Sources */,
 				18944E792C530C620055DF9F /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
