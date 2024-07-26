@@ -11,6 +11,19 @@
 		18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E532C52ED8D0055DF9F /* ContentView.swift */; };
 		18944E562C52ED8F0055DF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18944E552C52ED8F0055DF9F /* Assets.xcassets */; };
 		18944E592C52ED8F0055DF9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18944E582C52ED8F0055DF9F /* Preview Assets.xcassets */; };
+		18944E612C52F6E70055DF9F /* donkey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E602C52F6E70055DF9F /* donkey.mp3 */; };
+		18944E632C52FC3B0055DF9F /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E622C52FC3B0055DF9F /* AudioPlayer.swift */; };
+		18944E652C52FD3B0055DF9F /* goat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E642C52FD3B0055DF9F /* goat.mp3 */; };
+		18944E672C52FD850055DF9F /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E662C52FD850055DF9F /* cow.mp3 */; };
+		18944E692C52FDA60055DF9F /* sheep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E682C52FDA60055DF9F /* sheep.mp3 */; };
+		18944E6B2C52FDE30055DF9F /* pig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E6A2C52FDE30055DF9F /* pig.mp3 */; };
+		18944E6D2C52FDFE0055DF9F /* horse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E6C2C52FDFE0055DF9F /* horse.mp3 */; };
+		18944E6F2C5301DA0055DF9F /* duck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E6E2C5301D90055DF9F /* duck.mp3 */; };
+		18944E712C53020D0055DF9F /* chicken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E702C53020D0055DF9F /* chicken.mp3 */; };
+		18944E732C53029A0055DF9F /* rabbit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E722C53029A0055DF9F /* rabbit.mp3 */; };
+		18944E752C5302BD0055DF9F /* cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E742C5302BD0055DF9F /* cat.mp3 */; };
+		18944E772C5302E30055DF9F /* dog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944E762C5302E30055DF9F /* dog.mp3 */; };
+		18944E792C530C620055DF9F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E782C530C620055DF9F /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,19 @@
 		18944E532C52ED8D0055DF9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18944E552C52ED8F0055DF9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18944E582C52ED8F0055DF9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18944E602C52F6E70055DF9F /* donkey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = donkey.mp3; path = ../../../../Downloads/donkey.mp3; sourceTree = "<group>"; };
+		18944E622C52FC3B0055DF9F /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		18944E642C52FD3B0055DF9F /* goat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = goat.mp3; path = ../../../../Downloads/goat.mp3; sourceTree = "<group>"; };
+		18944E662C52FD850055DF9F /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cow.mp3; path = ../../../../Downloads/cow.mp3; sourceTree = "<group>"; };
+		18944E682C52FDA60055DF9F /* sheep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sheep.mp3; path = ../../../../Downloads/sheep.mp3; sourceTree = "<group>"; };
+		18944E6A2C52FDE30055DF9F /* pig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pig.mp3; path = ../../../../Downloads/pig.mp3; sourceTree = "<group>"; };
+		18944E6C2C52FDFE0055DF9F /* horse.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = horse.mp3; path = ../../../../Downloads/horse.mp3; sourceTree = "<group>"; };
+		18944E6E2C5301D90055DF9F /* duck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = duck.mp3; path = ../../../../Downloads/duck.mp3; sourceTree = "<group>"; };
+		18944E702C53020D0055DF9F /* chicken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = chicken.mp3; path = ../../../../Downloads/chicken.mp3; sourceTree = "<group>"; };
+		18944E722C53029A0055DF9F /* rabbit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rabbit.mp3; path = ../../../../Downloads/rabbit.mp3; sourceTree = "<group>"; };
+		18944E742C5302BD0055DF9F /* cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cat.mp3; path = ../../../../Downloads/cat.mp3; sourceTree = "<group>"; };
+		18944E762C5302E30055DF9F /* dog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dog.mp3; path = ../../../../Downloads/dog.mp3; sourceTree = "<group>"; };
+		18944E782C530C620055DF9F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +77,13 @@
 		18944E502C52ED8D0055DF9F /* PlayWithMax 1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				18944E5F2C52F6A00055DF9F /* Sounds */,
 				18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */,
+				18944E622C52FC3B0055DF9F /* AudioPlayer.swift */,
 				18944E532C52ED8D0055DF9F /* ContentView.swift */,
 				18944E552C52ED8F0055DF9F /* Assets.xcassets */,
 				18944E572C52ED8F0055DF9F /* Preview Content */,
+				18944E782C530C620055DF9F /* Model.swift */,
 			);
 			path = "PlayWithMax 1.0";
 			sourceTree = "<group>";
@@ -65,6 +94,24 @@
 				18944E582C52ED8F0055DF9F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18944E5F2C52F6A00055DF9F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				18944E702C53020D0055DF9F /* chicken.mp3 */,
+				18944E6E2C5301D90055DF9F /* duck.mp3 */,
+				18944E742C5302BD0055DF9F /* cat.mp3 */,
+				18944E662C52FD850055DF9F /* cow.mp3 */,
+				18944E762C5302E30055DF9F /* dog.mp3 */,
+				18944E6A2C52FDE30055DF9F /* pig.mp3 */,
+				18944E722C53029A0055DF9F /* rabbit.mp3 */,
+				18944E6C2C52FDFE0055DF9F /* horse.mp3 */,
+				18944E682C52FDA60055DF9F /* sheep.mp3 */,
+				18944E642C52FD3B0055DF9F /* goat.mp3 */,
+				18944E602C52F6E70055DF9F /* donkey.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +172,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18944E6D2C52FDFE0055DF9F /* horse.mp3 in Resources */,
 				18944E592C52ED8F0055DF9F /* Preview Assets.xcassets in Resources */,
+				18944E772C5302E30055DF9F /* dog.mp3 in Resources */,
+				18944E6F2C5301DA0055DF9F /* duck.mp3 in Resources */,
+				18944E652C52FD3B0055DF9F /* goat.mp3 in Resources */,
+				18944E712C53020D0055DF9F /* chicken.mp3 in Resources */,
+				18944E6B2C52FDE30055DF9F /* pig.mp3 in Resources */,
 				18944E562C52ED8F0055DF9F /* Assets.xcassets in Resources */,
+				18944E612C52F6E70055DF9F /* donkey.mp3 in Resources */,
+				18944E732C53029A0055DF9F /* rabbit.mp3 in Resources */,
+				18944E752C5302BD0055DF9F /* cat.mp3 in Resources */,
+				18944E692C52FDA60055DF9F /* sheep.mp3 in Resources */,
+				18944E672C52FD850055DF9F /* cow.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +197,8 @@
 			files = (
 				18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */,
 				18944E522C52ED8D0055DF9F /* PlayWithMax_1_0App.swift in Sources */,
+				18944E632C52FC3B0055DF9F /* AudioPlayer.swift in Sources */,
+				18944E792C530C620055DF9F /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlayWithMax 1.0/Preview Content\"";
+				DEVELOPMENT_TEAM = 9BTDG64AN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlayWithMax 1.0/Preview Content\"";
+				DEVELOPMENT_TEAM = 9BTDG64AN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
