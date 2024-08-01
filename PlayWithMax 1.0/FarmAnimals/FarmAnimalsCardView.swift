@@ -1,0 +1,75 @@
+//
+//  FarmAnimalsCardView.swift
+//  PlayWithMax 1.0
+//
+//  Created by Lucie Hrbkova on 01/08/2024.
+//
+
+import SwiftUI
+import AVFoundation
+
+struct FarmAnimalsCardView: View {
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @State private var tappedAnimal: String?
+    @ObservedObject private var audioPlayer = AudioPlayer() // Instantiate audio player
+    @ObservedObject private var viewModel = FarmAnimalsViewModel()
+
+    
+    var body: some View {
+        ZStack {
+            ScrollView(.horizontal) {
+                HStack{
+                    ForEach(viewModel.animalImageSet, id: \.name) { animal in
+                        AnimalCard(animal: animal.image, isTapped: tappedAnimal == animal.name, backGround: .white)
+                            .onTapGesture {
+                                audioPlayer.playSound(mp3: animal.name)
+                                withAnimation {
+                                    tappedAnimal = tappedAnimal == animal.name ? nil : animal.name
+                                }
+                                print(animal.name)
+                            }
+                    }
+                    
+                }
+                .padding()
+                .scrollTargetLayout()
+            }
+            .contentMargins(16, for: .scrollContent)
+            .scrollTargetBehavior(.viewAligned)
+            .scrollIndicators(.hidden)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // Allow the view to expand to fill the screen
+               .background(
+                   Image("farm1")
+                       .resizable()
+                       .scaledToFill()
+                       .clipped()
+               )
+               .edgesIgnoringSafeArea(.all) // Optional to ensure it respects safe area
+    }
+    
+    func AnimalCard(animal: Image, isTapped: Bool, backGround: Color) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(LinearGradient(gradient: Gradient(colors: [ .white, backGround]), startPoint: .top, endPoint: .bottomTrailing))
+                .shadow(color: isTapped ? .clear : .black.opacity(0.5), radius: isTapped ? 0 : 10, x: 0, y: 0) // Remove shadow when tapped
+                .frame(minWidth: 250, maxHeight: 400)
+                .padding()
+            animal
+                .resizable()
+                .frame(width: 240, height: 240)
+            
+                
+        }
+        .scrollTransition { EmptyVisualEffect, phase in
+            EmptyVisualEffect
+//                .opacity(phase.isIdentity ? 1.0 : 0.5)
+                .scaleEffect(x: phase.isIdentity ? 1.0 : 0.8,
+                             y: phase.isIdentity ? 1.0 : 0.8)
+        }
+    }
+}
+
+#Preview {
+    FarmAnimalsCardView()
+}
