@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-//
-//struct GuessGameView: View {
-//    
+
+struct GuessGameView: View {
+    
 //    var temporaryAnimal = animals.first!.image
-//    let columns = [GridItem(.adaptive(minimum: 100), spacing: 10)]
-//    let options = ["cat", "dog", "goat", "rabbit"]
-//    
-//    var body: some View {
+    let columns = [GridItem(.adaptive(minimum: 100), spacing: 10)]
+    let options = ["cat", "dog", "goat", "rabbit"]
+    
+    var body: some View {
 //        ZStack {
 //            RoundedRectangle(cornerRadius: 10)
 //                .fill(LinearGradient(gradient: Gradient(colors: [ .white, colors.first!]), startPoint: .top, endPoint: .bottomTrailing))
@@ -29,9 +29,10 @@ import SwiftUI
 //            }
 //        }
 //        .background(.pink)
-//        
-//    }
-//    
+        Text("Hello")
+        
+    }
+    
 //    var GuessButton: some View {
 //        Button {
 //            print("Hey guessed! ")
@@ -43,8 +44,8 @@ import SwiftUI
 //        .buttonStyle(BorderedButtonStyle())
 //
 //    }
-//}
-//
-//#Preview {
-//    GuessGameView()
-//}
+}
+
+#Preview {
+    GuessGameView()
+}

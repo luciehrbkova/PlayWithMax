@@ -15,36 +15,34 @@ struct FarmAnimaEmojiCardView: View {
     @ObservedObject private var audioPlayer = AudioPlayer() // Instantiate audio player
     
     var body: some View {
-        ZStack {
-            ScrollView(.horizontal) {
-                HStack{
-                    ForEach(animalsEmojiSet, id: \.name) { animal in
-                        AnimalCard(animal: animal.image, isTapped: tappedAnimal == animal.name, backGround: colors.randomElement() ?? .white)
-                            .onTapGesture {
-                                audioPlayer.playSound(mp3: animal.name)
-                                withAnimation {
-                                    tappedAnimal = tappedAnimal == animal.name ? nil : animal.name
+        VStack {
+            Text("Farm Emoji Animals")
+            ZStack {
+                ScrollView(.horizontal) {
+                    HStack{
+                        ForEach(animalsEmojiSet, id: \.name) { animal in
+                            AnimalCard(animal: animal.image, isTapped: tappedAnimal == animal.name, backGround: colors.randomElement() ?? .white)
+                                .onTapGesture {
+                                    audioPlayer.playSound(mp3: animal.name)
+                                    withAnimation {
+                                        tappedAnimal = tappedAnimal == animal.name ? nil : animal.name
+                                    }
+                                    print(animal.name)
                                 }
-                                print(animal.name)
-                            }
+                        }
+                        
                     }
-                    
+                    .padding()
+                    .scrollTargetLayout()
                 }
-                .padding()
-                .scrollTargetLayout()
+                .contentMargins(16, for: .scrollContent)
+                .scrollTargetBehavior(.viewAligned)
+                .scrollIndicators(.hidden)
             }
-            .contentMargins(16, for: .scrollContent)
-            .scrollTargetBehavior(.viewAligned)
-            .scrollIndicators(.hidden)
+            .frame(maxWidth: .infinity, maxHeight: .infinity) // Allow the view to expand to fill the screen
+            .background(.white)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity) // Allow the view to expand to fill the screen
-               .background(
-                   Image("farm1")
-                       .resizable()
-                       .scaledToFill()
-                       .clipped()
-               )
-               .edgesIgnoringSafeArea(.all) // Optional to ensure it respects safe area
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     func AnimalCard(animal: String, isTapped: Bool, backGround: Color) -> some View {
