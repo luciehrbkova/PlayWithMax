@@ -22,7 +22,7 @@ class FarmAnimalsViewModel : ObservableObject {
     private(set) var animalImageSet: [AnimalImageObject] = []
     
     func populateAnimalImageSet() {
-        let animalList = ["cat", "dog", "sheep", "goat", "horse", "donkey", "rabbit", "chicken", "duck", "cow", "pig",]
+        let animalList = ["pig", "cow", "sheep", "goat", "horse", "donkey","cat", "dog", "rabbit", "chicken", "duck",]
         animalImageSet = animalList.map { animal in
             createAnimalObject(animal: animal)
         }
