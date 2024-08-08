@@ -10,7 +10,8 @@ import SwiftUI
 var topics: [Topic] = [
     Topic(name: "Farm Emojis", imageName: "hare", color: .green, destinationView: AnyView(FarmAnimaEmojiCardView())),
     Topic(name: "Farm Animals", imageName: "cat", color: .teal, destinationView: AnyView(FarmAnimalsCardView())),
-    Topic(name: "Farm Guess Game", imageName: "pawprint", color: .indigo, destinationView: AnyView(GuessGameView()))
+    Topic(name: "Farm Guess Game", imageName: "pawprint", color: .indigo, destinationView: AnyView(GuessGameView())),
+    Topic(name: "Sensory Feedback", imageName: "hand.draw", color: .yellow, destinationView: AnyView(SensoryFeedbackView()))
 ]
 
 struct MainMenuView: View {

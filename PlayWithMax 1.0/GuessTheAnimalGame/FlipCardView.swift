@@ -17,8 +17,8 @@ struct FlipCardView: View {
     
     var body: some View {
             ZStack {
-            CardFront(width: width, height: height, degree: $frontDegree)
-            CardBack(width: width, height: height, degree: $backDegree)
+                CardFront(width: width, height: height, degree: frontDegree)
+                CardBack(width: width, height: height, degree: backDegree)
         }
         .onChange(of: isFlipped) { newValue in // Listen for changes to isFlipped
             flipCard()
@@ -51,7 +51,7 @@ struct FlipCardView: View {
 struct CardFront : View {
     let width : CGFloat
     let height : CGFloat
-    @Binding var degree : Double
+    var degree : Double
 
     var body: some View {
         ZStack {
@@ -72,7 +72,7 @@ struct CardFront : View {
 struct CardBack : View {
     let width : CGFloat
     let height : CGFloat
-    @Binding var degree : Double
+    var degree : Double
 
     var body: some View {
         ZStack {
@@ -91,7 +91,7 @@ struct CardBack : View {
     }
 }
 
-#Preview {
-    @State var isFlipped = false
-    FlipCardView(isFlipped: $isFlipped)
-}
+//#Preview {
+//    @State var isFlipped = false
+//    FlipCardView(isFlipped: $isFlipped)
+//}
