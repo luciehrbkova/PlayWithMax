@@ -80,12 +80,14 @@ func AnimalCard(animal: Image, isTapped: Bool, backGround: Color) -> some View {
             .fill(LinearGradient(gradient: Gradient(colors: [ .white, backGround]), startPoint: .top, endPoint: .bottomTrailing))
             .shadow(color: isTapped ? .clear : .black.opacity(0.5), radius: isTapped ? 0 : 10, x: 0, y: 0) // Remove shadow when tapped
             .frame(minWidth: 280, maxHeight: 440)
+            .scaleEffect(x: isTapped ? 1.05 : 1.0,
+                         y: isTapped ? 1.05 : 1.0)
             .padding()
         animal
             .resizable()
             .frame(width: 280, height: 280)
-        
-            
+            .scaleEffect(x: isTapped ? 1.05 : 1.0,
+                         y: isTapped ? 1.05 : 1.0)
     }
     .scrollTransition { EmptyVisualEffect, phase in
         EmptyVisualEffect

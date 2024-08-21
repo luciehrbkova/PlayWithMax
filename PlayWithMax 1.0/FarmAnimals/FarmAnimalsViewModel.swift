@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class FarmAnimalsViewModel : ObservableObject {
+class FarmAnimalsViewModel: ObservableObject  {
     
     private var animals: [AnimalImageObject] = [] // Store the array of animals
     
@@ -22,7 +22,7 @@ class FarmAnimalsViewModel : ObservableObject {
     private(set) var animalImageSet: [AnimalImageObject] = []
     
     func populateAnimalImageSet() {
-        let animalList = ["pig", "cow", "sheep", "goat", "horse", "donkey","cat", "dog", "rabbit", "chicken", "duck",]
+        let animalList = ["pig", "cow", "sheep", "goat", "horse", "donkey","cat", "dog", "rabbit", "chicken", "duck"]
         animalImageSet = animalList.map { animal in
             createAnimalObject(animal: animal)
         }
@@ -38,6 +38,14 @@ class FarmAnimalsViewModel : ObservableObject {
         var allAnimals: [AnimalImageObject] {
             return animals
         }
+    
+    func startGame() {
+        
+    }
+    
+    func shuffleAnimals() -> [AnimalImageObject] {
+        return animals.shuffled()
+    }
 }
 
 struct AnimalImageObject {

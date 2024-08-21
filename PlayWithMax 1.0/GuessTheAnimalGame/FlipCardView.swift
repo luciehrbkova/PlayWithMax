@@ -11,14 +11,16 @@ struct FlipCardView: View {
        @Binding var isFlipped: Bool // <- Make it a binding
        @State private var backDegree = 0.0
        @State private var frontDegree = -90.0
+       @State var animalImage: Image
+       let sfSymbol: Image
 
        let width: CGFloat = 200
        let height: CGFloat = 250
     
     var body: some View {
             ZStack {
-                CardFront(width: width, height: height, degree: frontDegree)
-                CardBack(width: width, height: height, degree: backDegree)
+                CardFront(width: width, height: height, degree: frontDegree, animalImage: animalImage)
+                CardBack(width: width, height: height, degree: backDegree, sfSymbol: sfSymbol)
         }
         .onChange(of: isFlipped) { newValue in // Listen for changes to isFlipped
             flipCard()
@@ -52,6 +54,7 @@ struct CardFront : View {
     let width : CGFloat
     let height : CGFloat
     var degree : Double
+    var animalImage: Image
 
     var body: some View {
         ZStack {
@@ -59,8 +62,7 @@ struct CardFront : View {
                 .fill(.white)
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
-
-            Image("cat")
+            animalImage
                 .resizable()
                 .frame(width: 150, height: 150)
                 .foregroundColor(.red)
@@ -73,6 +75,7 @@ struct CardBack : View {
     let width : CGFloat
     let height : CGFloat
     var degree : Double
+    var sfSymbol: Image
 
     var body: some View {
         ZStack {
@@ -80,8 +83,7 @@ struct CardBack : View {
                 .fill(.white)
                 .frame(width: width, height: height)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
-
-            Image(systemName: "music.quarternote.3")
+            sfSymbol
                 .resizable()
                 .frame(width: 80, height: 80)
                 .foregroundColor(.blue.opacity(0.7))
