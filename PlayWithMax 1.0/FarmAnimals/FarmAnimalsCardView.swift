@@ -52,26 +52,6 @@ struct FarmAnimalsCardView: View {
         .navigationBarTitleDisplayMode(.inline)
         
     }
-    
-//    func AnimalCard(animal: Image, isTapped: Bool, backGround: Color) -> some View {
-//        ZStack {
-//            RoundedRectangle(cornerRadius: 20)
-//                .fill(LinearGradient(gradient: Gradient(colors: [ .white, backGround]), startPoint: .top, endPoint: .bottomTrailing))
-//                .shadow(color: isTapped ? .clear : .black.opacity(0.5), radius: isTapped ? 0 : 10, x: 0, y: 0) // Remove shadow when tapped
-//                .frame(minWidth: 280, maxHeight: 440)
-//                .padding()
-//            animal
-//                .resizable()
-//                .frame(width: 280, height: 280)
-//            
-//                
-//        }
-//        .scrollTransition { EmptyVisualEffect, phase in
-//            EmptyVisualEffect
-//                .scaleEffect(x: phase.isIdentity ? 1.0 : 0.9,
-//                             y: phase.isIdentity ? 1.0 : 0.9)
-//        }
-//    }
 }
 
 func AnimalCard(animal: Image, isTapped: Bool, backGround: Color) -> some View {

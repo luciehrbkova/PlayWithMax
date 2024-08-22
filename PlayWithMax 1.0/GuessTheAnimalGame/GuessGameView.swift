@@ -18,15 +18,13 @@ struct GuessGameView: View {
                 FlipCardView(viewModel: viewModel, 
                              sfSymbol: Image(systemName: "music.quarternote.3"))
                     .onTapGesture {
-                        if viewModel.isFlipped {
-                            viewModel.restartGame()
-                        }
+                        viewModel.mainCardTapped()
                     }
                 HStack
                 {
                     ForEach(0..<2) { index in
                         choiceButton(animal: viewModel.getAnimal(index: index).image,
-                                     number: index)
+                                     number: index, background: (index == viewModel.correctAnswer) ? .white : viewModel.cardBackgroundColor)
                     }
 
                 }
@@ -48,10 +46,11 @@ struct GuessGameView: View {
         
     }
     
-    func choiceButton(animal: Image, number: Int) -> some View {
+    func choiceButton(animal: Image, number: Int, background: Color) -> some View {
         Button {
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
             viewModel.choiceButtonTapped(number: number)
-//            isFlipped.toggle()
         } label: {
             animal
                 .resizable()
@@ -60,11 +59,10 @@ struct GuessGameView: View {
                 .padding(12)
         }
         .contentShape(Rectangle()) // Entire frame is tappable
-        .background(.white)
+        .background(background)
         .cornerRadius(20)
         .shadow(radius: 5)
     }
-
 }
 
 #Preview {

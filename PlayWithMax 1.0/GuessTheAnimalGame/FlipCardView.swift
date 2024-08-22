@@ -19,7 +19,7 @@ struct FlipCardView: View {
     var body: some View {
             ZStack {
                 CardFront(width: width, height: height, degree: frontDegree, animalImage: viewModel.getCorrectAnimal().image)
-                CardBack(width: width, height: height, degree: backDegree, sfSymbol: sfSymbol)
+                CardBack(width: width, height: height, degree: backDegree, sfSymbol: sfSymbol, animate: viewModel.animate)
             }
             .onChange(of: viewModel.isFlipped) { _ , newValue in // Listen for changes to isFlipped
                 flipCard()
@@ -75,6 +75,7 @@ struct CardBack : View {
     let height : CGFloat
     var degree : Double
     var sfSymbol: Image
+    var animate: Bool
 
     var body: some View {
         ZStack {
@@ -85,7 +86,8 @@ struct CardBack : View {
             sfSymbol
                 .resizable()
                 .frame(width: 80, height: 80)
-                .foregroundColor(.blue.opacity(0.7))
+                .foregroundColor(.indigo)
+                .symbolEffect(.bounce, options: .speed(3).repeat(3), value: animate)
 
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
 

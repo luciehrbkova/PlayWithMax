@@ -13,6 +13,9 @@ class FarmAnimalsViewModel: ObservableObject  {
     @Published var animals: [AnimalImageObject] // Store the array of animals
     @Published var correctAnswer: Int
     @Published var isFlipped = false
+    @Published var animate = false
+    @Published var cardBackgroundColor: Color = .white
+    @ObservedObject private var audioPlayer = AudioPlayer() // Instantiate audio player
     
     init() {
         self.animals = AnimalImageObject.DefaultAnimalSet()
@@ -23,6 +26,7 @@ class FarmAnimalsViewModel: ObservableObject  {
     func restartGame(delay: Double = 0.3) {
         // Reset the flipped state first
         isFlipped = false
+        animate = false
         // We need a 0.3 second delay until we switch to the next correct answer,
         // because otherwise you can see it when the card flips back around!
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
@@ -43,9 +47,28 @@ class FarmAnimalsViewModel: ObservableObject  {
         if (number == correctAnswer){
             isFlipped = true
         } else {
+            changeBackgroundColor()
             print("Wrong answer")
         }
     }
+    
+    func changeBackgroundColor() {
+        cardBackgroundColor = (.red)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.cardBackgroundColor = .white
+        }
+    }
+    
+    func mainCardTapped() {
+        if !isFlipped {
+            audioPlayer.playSound(mp3: animals[correctAnswer].name)
+            animate.toggle()
+        } else {
+            restartGame()
+        }
+    }
+    
+    
 }
 
 struct AnimalImageObject {
