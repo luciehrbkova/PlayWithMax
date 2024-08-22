@@ -21,7 +21,7 @@ struct FarmAnimalsCardView: View {
             ZStack {
                 ScrollView(.horizontal) {
                     HStack{
-                        ForEach(viewModel.animalImageSet, id: \.name) { animal in
+                        ForEach(viewModel.animals, id: \.name) { animal in
                             AnimalCard(animal: animal.image, isTapped: tappedAnimal == animal.name, backGround: .white)
                                 .onTapGesture {
                                     audioPlayer.playSound(mp3: animal.name)

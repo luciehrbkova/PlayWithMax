@@ -8,35 +8,25 @@
 import SwiftUI
 
 struct GuessGameView: View {
-    @State var isFlipped = false
     @ObservedObject private var viewModel = FarmAnimalsViewModel()
     
-    @State private var animals: [AnimalImageObject] = [] // Changed to hold the shuffled array
-    @State private var correctAnswer = Int.random(in: 0...1)
-    
-//    init(animals: [AnimalImageObject] = []){
-//        self.animals = viewModel.shuffleAnimals()
-//    }
-//    init(){
-//        
-//    }
-    
     var body: some View {
-//        @State var animals = viewModel.animalImageSet.shuffled()
         
         VStack {
             Text("Guess Farm Animal")
             VStack {
-                FlipCardView(isFlipped: $isFlipped, animalImage: animals[correctAnswer].image, sfSymbol: Image(systemName: "music.quarternote.3"))
+                FlipCardView(viewModel: viewModel, 
+                             sfSymbol: Image(systemName: "music.quarternote.3"))
                     .onTapGesture {
-                        if isFlipped {
-                        restartGame()
+                        if viewModel.isFlipped {
+                            viewModel.restartGame()
                         }
                     }
                 HStack
                 {
                     ForEach(0..<2) { index in
-                        choiceButton(animal: animals[index].image, number: index)
+                        choiceButton(animal: viewModel.getAnimal(index: index).image,
+                                     number: index)
                     }
 
                 }
@@ -54,13 +44,13 @@ struct GuessGameView: View {
            .padding(.horizontal, 50)
         }
         .navigationBarTitleDisplayMode(.inline)
-        .onAppear(perform: setupGame)
+        
         
     }
     
     func choiceButton(animal: Image, number: Int) -> some View {
         Button {
-            choiceButtonTapped(number: number)
+            viewModel.choiceButtonTapped(number: number)
 //            isFlipped.toggle()
         } label: {
             animal
@@ -73,25 +63,6 @@ struct GuessGameView: View {
         .background(.white)
         .cornerRadius(20)
         .shadow(radius: 5)
-    }
-    
-    func choiceButtonTapped(number: Int) {
-        if (number == correctAnswer){
-            isFlipped = true
-        } else {
-            print("Wrong answer")
-        }
-    }
-    
-    private func setupGame() {
-        animals = viewModel.animalImageSet.shuffled() // Shuffle the animals
-        correctAnswer = Int.random(in: 0..<2) // Randomly select the correct answer
-        isFlipped = false // Reset flipped state
-    }
-    
-    func restartGame() {
-        setupGame()
-        print(correctAnswer)
     }
 
 }

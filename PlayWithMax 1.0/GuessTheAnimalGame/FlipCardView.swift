@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct FlipCardView: View {
-       @Binding var isFlipped: Bool // <- Make it a binding
        @State private var backDegree = 0.0
        @State private var frontDegree = -90.0
-       @State var animalImage: Image
+       @ObservedObject var viewModel: FarmAnimalsViewModel
        let sfSymbol: Image
 
        let width: CGFloat = 200
@@ -19,19 +18,19 @@ struct FlipCardView: View {
     
     var body: some View {
             ZStack {
-                CardFront(width: width, height: height, degree: frontDegree, animalImage: animalImage)
+                CardFront(width: width, height: height, degree: frontDegree, animalImage: viewModel.getCorrectAnimal().image)
                 CardBack(width: width, height: height, degree: backDegree, sfSymbol: sfSymbol)
+            }
+            .onChange(of: viewModel.isFlipped) { _ , newValue in // Listen for changes to isFlipped
+                flipCard()
+            }
         }
-        .onChange(of: isFlipped) { newValue in // Listen for changes to isFlipped
-            flipCard()
-        }
-    }
 
     
     private func flipCard() {
             let durationAndDelay: CGFloat = 0.3
             
-            if isFlipped {
+        if viewModel.isFlipped {
                 withAnimation(.linear(duration: durationAndDelay).delay(durationAndDelay)) {
                     frontDegree = 0
                 }

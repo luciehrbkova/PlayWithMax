@@ -10,45 +10,55 @@ import SwiftUI
 
 class FarmAnimalsViewModel: ObservableObject  {
     
-    private var animals: [AnimalImageObject] = [] // Store the array of animals
+    @Published var animals: [AnimalImageObject] // Store the array of animals
+    @Published var correctAnswer: Int
+    @Published var isFlipped = false
     
-    init(animals: [AnimalImageObject] = []){
-        populateAnimalImageSet()
-        self.animals = animalImageSet
+    init() {
+        self.animals = AnimalImageObject.DefaultAnimalSet()
+        self.correctAnswer = Int.random(in: 0...1)
+        restartGame(delay: 0) // No need for any delay on the first run
     }
     
-    
-    // Removed global variable and made it a property in the class
-    private(set) var animalImageSet: [AnimalImageObject] = []
-    
-    func populateAnimalImageSet() {
-        let animalList = ["pig", "cow", "sheep", "goat", "horse", "donkey","cat", "dog", "rabbit", "chicken", "duck"]
-        animalImageSet = animalList.map { animal in
-            createAnimalObject(animal: animal)
+    func restartGame(delay: Double = 0.3) {
+        // Reset the flipped state first
+        isFlipped = false
+        // We need a 0.3 second delay until we switch to the next correct answer,
+        // because otherwise you can see it when the card flips back around!
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.correctAnswer = Int.random(in: 0...1) // Randomly select the correct answer
+            self.animals.shuffle() // Shuffle the animals
         }
-        self.animals = animalImageSet // Set the animals property after populating
     }
 
-    func createAnimalObject(animal: String) -> AnimalImageObject {
-        let animalImage = Image(animal) // Assumes you have images in your assets
-        return AnimalImageObject(name: animal, image: animalImage)
+    func getAnimal(index: Int) -> AnimalImageObject {
+        animals[index]
     }
-    
-    // Optionally, you can expose animals for reading
-        var allAnimals: [AnimalImageObject] {
-            return animals
+
+    func getCorrectAnimal() -> AnimalImageObject {
+        getAnimal(index: correctAnswer)
+    }
+
+    func choiceButtonTapped(number: Int) {
+        if (number == correctAnswer){
+            isFlipped = true
+        } else {
+            print("Wrong answer")
         }
-    
-    func startGame() {
-        
-    }
-    
-    func shuffleAnimals() -> [AnimalImageObject] {
-        return animals.shuffled()
     }
 }
 
 struct AnimalImageObject {
-    let name: String
-    let image: Image
+    init(name: String) {
+            self.name = name
+            self.image = Image(name)
+        }
+
+        let name: String
+        let image: Image
+    
+    static func DefaultAnimalSet() -> [AnimalImageObject] {
+            ["pig", "cow", "sheep", "goat", "horse", "donkey","cat", "dog", "rabbit", "chicken", "duck"]
+                .map { AnimalImageObject(name: $0) }
+        }
 }

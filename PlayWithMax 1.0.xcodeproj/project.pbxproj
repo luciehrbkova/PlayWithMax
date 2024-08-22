@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180A7BE92C6A7D44009AD6E1 /* GuessGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A7BE82C6A7D44009AD6E1 /* GuessGameModel.swift */; };
 		18944E522C52ED8D0055DF9F /* PlayWithMax_1_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */; };
 		18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E532C52ED8D0055DF9F /* ContentView.swift */; };
 		18944E562C52ED8F0055DF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18944E552C52ED8F0055DF9F /* Assets.xcassets */; };
@@ -35,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		180A7BE82C6A7D44009AD6E1 /* GuessGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessGameModel.swift; sourceTree = "<group>"; };
 		18944E4E2C52ED8D0055DF9F /* PlayWithMax 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlayWithMax 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithMax_1_0App.swift; sourceTree = "<group>"; };
 		18944E532C52ED8D0055DF9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			children = (
 				18944EF92C53E70B0055DF9F /* GuessGameView.swift */,
 				18944F182C6266800055DF9F /* FlipCardView.swift */,
-				180A7BE82C6A7D44009AD6E1 /* GuessGameModel.swift */,
 			);
 			path = GuessTheAnimalGame;
 			sourceTree = "<group>";
@@ -256,7 +253,6 @@
 				18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */,
 				18944E522C52ED8D0055DF9F /* PlayWithMax_1_0App.swift in Sources */,
 				18944F192C6266800055DF9F /* FlipCardView.swift in Sources */,
-				180A7BE92C6A7D44009AD6E1 /* GuessGameModel.swift in Sources */,
 				18944E632C52FC3B0055DF9F /* AudioPlayer.swift in Sources */,
 				18944F0D2C5BE60C0055DF9F /* FarmAnimaEmojiCardView.swift in Sources */,
 				18944EFA2C53E70B0055DF9F /* GuessGameView.swift in Sources */,
