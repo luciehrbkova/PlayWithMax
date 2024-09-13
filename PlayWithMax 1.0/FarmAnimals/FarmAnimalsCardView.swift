@@ -16,8 +16,9 @@ struct FarmAnimalsCardView: View {
 
     
     var body: some View {
+        
         VStack {
-            Text("Farm Animals")
+//            Text("Farm Animals")
             ZStack {
                 ScrollView(.horizontal) {
                     HStack{
@@ -49,30 +50,76 @@ struct FarmAnimalsCardView: View {
                    )
                    .edgesIgnoringSafeArea(.all) // Optional to ensure it respects safe area
         }
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.large)
         
     }
+ 
 }
 
-func AnimalCard(animal: Image, isTapped: Bool, backGround: Color) -> some View {
-    ZStack {
-        RoundedRectangle(cornerRadius: 20)
-            .fill(LinearGradient(gradient: Gradient(colors: [ .white, backGround]), startPoint: .top, endPoint: .bottomTrailing))
-            .shadow(color: isTapped ? .clear : .black.opacity(0.5), radius: isTapped ? 0 : 10, x: 0, y: 0) // Remove shadow when tapped
-            .frame(minWidth: 280, maxHeight: 440)
-            .scaleEffect(x: isTapped ? 1.05 : 1.0,
-                         y: isTapped ? 1.05 : 1.0)
-            .padding()
-        animal
-            .resizable()
-            .frame(width: 280, height: 280)
-            .scaleEffect(x: isTapped ? 1.05 : 1.0,
-                         y: isTapped ? 1.05 : 1.0)
-    }
-    .scrollTransition { EmptyVisualEffect, phase in
-        EmptyVisualEffect
-            .scaleEffect(x: phase.isIdentity ? 1.0 : 0.9,
-                         y: phase.isIdentity ? 1.0 : 0.9)
+//func AnimalCard(animal: Image, isTapped: Bool, backGround: Color) -> some View {
+//    ZStack {
+//        RoundedRectangle(cornerRadius: 20)
+//            .fill(LinearGradient(gradient: Gradient(colors: [ .white, backGround]), startPoint: .top, endPoint: .bottomTrailing))
+//            .shadow(color: isTapped ? .clear : .black.opacity(0.5), radius: isTapped ? 0 : 10, x: 0, y: 0) // Remove shadow when tapped
+//            .frame(minWidth: 280, maxHeight: 440)
+//            .scaleEffect(x: isTapped ? 1.05 : 1.0,
+//                         y: isTapped ? 1.05 : 1.0)
+//            .onTapGesture {
+//                withAnimation {
+//                    isTapped = true // Scale up when tapped
+//                }
+//
+//                // Reset after a 0.5 seconds delay
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                    withAnimation {
+//                        isTapped = false // Scale back down after 0.5 seconds
+//                    }
+//                }
+//            }
+//            .padding()
+//        animal
+//            .resizable()
+//            .frame(width: 280, height: 280)
+//            .scaleEffect(x: isTapped ? 1.05 : 1.0,
+//                         y: isTapped ? 1.05 : 1.0)
+//    }
+//    .scrollTransition { EmptyVisualEffect, phase in
+//        EmptyVisualEffect
+//            .scaleEffect(x: phase.isIdentity ? 1.0 : 0.9,
+//                         y: phase.isIdentity ? 1.0 : 0.9)
+//    }
+//}
+
+struct AnimalCard: View { // Changed to a View
+    var animal: Image
+    var isTapped: Bool
+    var backGround: Color
+    @State private var isAnimating = false // Internal state for animation
+
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(LinearGradient(gradient: Gradient(colors: [.white, backGround]), startPoint: .top, endPoint: .bottomTrailing))
+                .shadow(color: isTapped ? .clear : .black.opacity(0.5), radius: isTapped ? 0 : 10, x: 0, y: 0) // Remove shadow when tapped
+                .frame(minWidth: 280, maxHeight: 440)
+                .scaleEffect(isAnimating ? 1.05 : 1.0) // Scale effect
+                .animation(.easeInOut(duration: 0.3), value: isAnimating) // Animate scale changes
+                .onTapGesture {
+                    isAnimating = true // Scale up when tapped
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        withAnimation {
+                            isAnimating = false // Scale back down after 0.5 seconds
+                        }
+                    }
+                }
+                .padding()
+
+            animal
+                .resizable()
+                .frame(width: 280, height: 280)
+                .scaleEffect(isAnimating ? 1.05 : 1.0) // Scale effect for the animal itself
+                .animation(.easeInOut(duration: 0.3), value: isAnimating) // Animate
+        }
     }
 }
 

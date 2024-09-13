@@ -16,11 +16,12 @@ class FarmAnimalsViewModel: ObservableObject  {
     @Published var animate = false
     @Published var cardBackgroundColor: Color = .white
     @ObservedObject private var audioPlayer = AudioPlayer() // Instantiate audio player
+    private let delay: Double = 0.3
     
     init() {
         self.animals = AnimalImageObject.DefaultAnimalSet()
         self.correctAnswer = Int.random(in: 0...1)
-        restartGame(delay: 0) // No need for any delay on the first run
+        restartGame(delay: delay) // No need for any delay on the first run
     }
     
     func restartGame(delay: Double = 0.3) {
@@ -46,6 +47,9 @@ class FarmAnimalsViewModel: ObservableObject  {
     func choiceButtonTapped(number: Int) {
         if (number == correctAnswer){
             isFlipped = true
+            DispatchQueue.main.asyncAfter(deadline: .now()){
+                self.playCorrectAnimal()
+            }
         } else {
             changeBackgroundColor()
             print("Wrong answer")
@@ -61,11 +65,15 @@ class FarmAnimalsViewModel: ObservableObject  {
     
     func mainCardTapped() {
         if !isFlipped {
-            audioPlayer.playSound(mp3: animals[correctAnswer].name)
+            playCorrectAnimal()
             animate.toggle()
         } else {
             restartGame()
         }
+    }
+    
+    func playCorrectAnimal() {
+        audioPlayer.playSound(mp3: animals[correctAnswer].name)
     }
     
     
@@ -81,7 +89,7 @@ struct AnimalImageObject {
         let image: Image
     
     static func DefaultAnimalSet() -> [AnimalImageObject] {
-            ["pig", "cow", "sheep", "goat", "horse", "donkey","cat", "dog", "rabbit", "chicken", "duck"]
+            ["pig", "cow", "sheep", "goat", "horse", "donkey", "cat", "dog", "rabbit", "chicken", "duck"]
                 .map { AnimalImageObject(name: $0) }
         }
 }

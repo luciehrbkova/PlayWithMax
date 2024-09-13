@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180A7C252C7F1246009AD6E1 /* TabMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A7C242C7F1246009AD6E1 /* TabMenuView.swift */; };
 		18944E522C52ED8D0055DF9F /* PlayWithMax_1_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */; };
 		18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E532C52ED8D0055DF9F /* ContentView.swift */; };
 		18944E562C52ED8F0055DF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18944E552C52ED8F0055DF9F /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180A7C242C7F1246009AD6E1 /* TabMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
 		18944E4E2C52ED8D0055DF9F /* PlayWithMax 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlayWithMax 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithMax_1_0App.swift; sourceTree = "<group>"; };
 		18944E532C52ED8D0055DF9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,11 +93,11 @@
 		18944E502C52ED8D0055DF9F /* PlayWithMax 1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */,
+				18944E532C52ED8D0055DF9F /* ContentView.swift */,
 				18944F142C5C37460055DF9F /* MainMenu */,
 				18944EED2C53E6830055DF9F /* Sounds */,
-				18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */,
 				18944E622C52FC3B0055DF9F /* AudioPlayer.swift */,
-				18944E532C52ED8D0055DF9F /* ContentView.swift */,
 				18944F0F2C5C319D0055DF9F /* FarmAnimals */,
 				18944F0E2C5C31600055DF9F /* FarmAnimalsEmoji */,
 				18944F152C625C790055DF9F /* GuessTheAnimalGame */,
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				18944F122C5C371B0055DF9F /* MainMenuView.swift */,
+				180A7C242C7F1246009AD6E1 /* TabMenuView.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				18944E792C530C620055DF9F /* Model.swift in Sources */,
 				18944F0B2C5BE4070055DF9F /* FarmAnimalsCardView.swift in Sources */,
 				18944F112C5C31D30055DF9F /* FarmAnimalsViewModel.swift in Sources */,
+				180A7C252C7F1246009AD6E1 /* TabMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
