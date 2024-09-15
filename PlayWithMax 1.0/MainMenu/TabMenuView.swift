@@ -10,7 +10,7 @@ import SwiftUI
 struct TabMenuView: View {
     var body: some View {
         TabView{
-            FarmAnimalsCardView()
+            CarouselCardView()
                 .tabItem {
                     Image(systemName: "cat.fill")
                     Text("Animal Voices")

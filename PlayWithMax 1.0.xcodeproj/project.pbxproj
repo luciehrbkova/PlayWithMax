@@ -13,7 +13,6 @@
 		18944E562C52ED8F0055DF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18944E552C52ED8F0055DF9F /* Assets.xcassets */; };
 		18944E592C52ED8F0055DF9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18944E582C52ED8F0055DF9F /* Preview Assets.xcassets */; };
 		18944E632C52FC3B0055DF9F /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E622C52FC3B0055DF9F /* AudioPlayer.swift */; };
-		18944E792C530C620055DF9F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E782C530C620055DF9F /* Model.swift */; };
 		18944EEE2C53E6830055DF9F /* cat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944EE22C53E6830055DF9F /* cat.mp3 */; };
 		18944EEF2C53E6830055DF9F /* chicken.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944EE32C53E6830055DF9F /* chicken.mp3 */; };
 		18944EF02C53E6830055DF9F /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944EE42C53E6830055DF9F /* cow.mp3 */; };
@@ -27,11 +26,13 @@
 		18944EF82C53E6830055DF9F /* sheep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18944EEC2C53E6830055DF9F /* sheep.mp3 */; };
 		18944EFA2C53E70B0055DF9F /* GuessGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944EF92C53E70B0055DF9F /* GuessGameView.swift */; };
 		18944F032C584B180055DF9F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944F022C584B180055DF9F /* ImageView.swift */; };
-		18944F0B2C5BE4070055DF9F /* FarmAnimalsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944F0A2C5BE4070055DF9F /* FarmAnimalsCardView.swift */; };
-		18944F0D2C5BE60C0055DF9F /* FarmAnimaEmojiCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944F0C2C5BE60B0055DF9F /* FarmAnimaEmojiCardView.swift */; };
 		18944F112C5C31D30055DF9F /* FarmAnimalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944F102C5C31D30055DF9F /* FarmAnimalsViewModel.swift */; };
 		18944F132C5C371B0055DF9F /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944F122C5C371B0055DF9F /* MainMenuView.swift */; };
 		18944F192C6266800055DF9F /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944F182C6266800055DF9F /* FlipCardView.swift */; };
+		18C463162C94B3B8007CE262 /* CarouselCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C463152C94B3B8007CE262 /* CarouselCardView.swift */; };
+		18C463182C94B3C8007CE262 /* CardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C463172C94B3C8007CE262 /* CardGameView.swift */; };
+		18C4631A2C94B3D9007CE262 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C463192C94B3D9007CE262 /* CardViewModel.swift */; };
+		18C4631C2C94B806007CE262 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4631B2C94B806007CE262 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,6 @@
 		18944E552C52ED8F0055DF9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18944E582C52ED8F0055DF9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18944E622C52FC3B0055DF9F /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
-		18944E782C530C620055DF9F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		18944EE22C53E6830055DF9F /* cat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cat.mp3; sourceTree = "<group>"; };
 		18944EE32C53E6830055DF9F /* chicken.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chicken.mp3; sourceTree = "<group>"; };
 		18944EE42C53E6830055DF9F /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cow.mp3; sourceTree = "<group>"; };
@@ -56,11 +56,13 @@
 		18944EEC2C53E6830055DF9F /* sheep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sheep.mp3; sourceTree = "<group>"; };
 		18944EF92C53E70B0055DF9F /* GuessGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessGameView.swift; sourceTree = "<group>"; };
 		18944F022C584B180055DF9F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		18944F0A2C5BE4070055DF9F /* FarmAnimalsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmAnimalsCardView.swift; sourceTree = "<group>"; };
-		18944F0C2C5BE60B0055DF9F /* FarmAnimaEmojiCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmAnimaEmojiCardView.swift; sourceTree = "<group>"; };
 		18944F102C5C31D30055DF9F /* FarmAnimalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmAnimalsViewModel.swift; sourceTree = "<group>"; };
 		18944F122C5C371B0055DF9F /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		18944F182C6266800055DF9F /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
+		18C463152C94B3B8007CE262 /* CarouselCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCardView.swift; sourceTree = "<group>"; };
+		18C463172C94B3C8007CE262 /* CardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameView.swift; sourceTree = "<group>"; };
+		18C463192C94B3D9007CE262 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		18C4631B2C94B806007CE262 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,13 +95,13 @@
 		18944E502C52ED8D0055DF9F /* PlayWithMax 1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				18C463142C94B397007CE262 /* CarouselAndGame */,
 				18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */,
 				18944E532C52ED8D0055DF9F /* ContentView.swift */,
 				18944F142C5C37460055DF9F /* MainMenu */,
 				18944EED2C53E6830055DF9F /* Sounds */,
 				18944E622C52FC3B0055DF9F /* AudioPlayer.swift */,
 				18944F0F2C5C319D0055DF9F /* FarmAnimals */,
-				18944F0E2C5C31600055DF9F /* FarmAnimalsEmoji */,
 				18944F152C625C790055DF9F /* GuessTheAnimalGame */,
 				18944F022C584B180055DF9F /* ImageView.swift */,
 				18944E552C52ED8F0055DF9F /* Assets.xcassets */,
@@ -134,19 +136,9 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		18944F0E2C5C31600055DF9F /* FarmAnimalsEmoji */ = {
-			isa = PBXGroup;
-			children = (
-				18944F0C2C5BE60B0055DF9F /* FarmAnimaEmojiCardView.swift */,
-				18944E782C530C620055DF9F /* Model.swift */,
-			);
-			path = FarmAnimalsEmoji;
-			sourceTree = "<group>";
-		};
 		18944F0F2C5C319D0055DF9F /* FarmAnimals */ = {
 			isa = PBXGroup;
 			children = (
-				18944F0A2C5BE4070055DF9F /* FarmAnimalsCardView.swift */,
 				18944F102C5C31D30055DF9F /* FarmAnimalsViewModel.swift */,
 			);
 			path = FarmAnimals;
@@ -168,6 +160,17 @@
 				18944F182C6266800055DF9F /* FlipCardView.swift */,
 			);
 			path = GuessTheAnimalGame;
+			sourceTree = "<group>";
+		};
+		18C463142C94B397007CE262 /* CarouselAndGame */ = {
+			isa = PBXGroup;
+			children = (
+				18C463152C94B3B8007CE262 /* CarouselCardView.swift */,
+				18C463172C94B3C8007CE262 /* CardGameView.swift */,
+				18C463192C94B3D9007CE262 /* CardViewModel.swift */,
+				18C4631B2C94B806007CE262 /* CardView.swift */,
+			);
+			path = CarouselAndGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,16 +254,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C4631C2C94B806007CE262 /* CardView.swift in Sources */,
+				18C463182C94B3C8007CE262 /* CardGameView.swift in Sources */,
 				18944F132C5C371B0055DF9F /* MainMenuView.swift in Sources */,
 				18944F032C584B180055DF9F /* ImageView.swift in Sources */,
+				18C463162C94B3B8007CE262 /* CarouselCardView.swift in Sources */,
 				18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */,
 				18944E522C52ED8D0055DF9F /* PlayWithMax_1_0App.swift in Sources */,
 				18944F192C6266800055DF9F /* FlipCardView.swift in Sources */,
 				18944E632C52FC3B0055DF9F /* AudioPlayer.swift in Sources */,
-				18944F0D2C5BE60C0055DF9F /* FarmAnimaEmojiCardView.swift in Sources */,
+				18C4631A2C94B3D9007CE262 /* CardViewModel.swift in Sources */,
 				18944EFA2C53E70B0055DF9F /* GuessGameView.swift in Sources */,
-				18944E792C530C620055DF9F /* Model.swift in Sources */,
-				18944F0B2C5BE4070055DF9F /* FarmAnimalsCardView.swift in Sources */,
 				18944F112C5C31D30055DF9F /* FarmAnimalsViewModel.swift in Sources */,
 				180A7C252C7F1246009AD6E1 /* TabMenuView.swift in Sources */,
 			);
