@@ -10,7 +10,6 @@ import SwiftUI
 struct CarouselCardView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @State private var tappedImage: String?
-    @ObservedObject private var audioPlayer = AudioPlayer() // Instantiate audio player
     @ObservedObject private var viewModel = CardViewModel()
     
     var body: some View {
@@ -21,7 +20,7 @@ struct CarouselCardView: View {
                         ForEach(viewModel.animals, id: \.name) { animal in
                             CardView(animal: animal.image, isTapped: tappedImage == animal.name, backGround: .white)
                                 .onTapGesture {
-                                    audioPlayer.playSound(mp3: animal.name)
+                                    viewModel.playTappedAnimal(animal: animal.name)
                                     withAnimation {
                                         tappedImage = tappedImage == animal.name ? nil : animal.name
                                     }

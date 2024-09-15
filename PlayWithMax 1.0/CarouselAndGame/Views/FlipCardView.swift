@@ -10,7 +10,7 @@ import SwiftUI
 struct FlipCardView: View {
        @State private var backDegree = 0.0
        @State private var frontDegree = -90.0
-       @ObservedObject var viewModel: FarmAnimalsViewModel
+       @ObservedObject var viewModel: CardViewModel
        let sfSymbol: Image
 
        let width: CGFloat = 200
@@ -93,8 +93,3 @@ struct CardBack : View {
 
     }
 }
-
-//#Preview {
-//    @State var isFlipped = false
-//    FlipCardView(isFlipped: $isFlipped)
-//}

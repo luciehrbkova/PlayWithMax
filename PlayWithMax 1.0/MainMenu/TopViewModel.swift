@@ -1,0 +1,33 @@
+//
+//  TopViewModel.swift
+//  PlayWithMax 1.0
+//
+//  Created by Lucie Hrbkova on 15/09/2024.
+//
+
+import Foundation
+import SwiftUI
+
+class TopViewModel: ObservableObject {
+    var categories: [Category] = [
+        Category(name: "Farm Animals", imageName: "cat", color: .teal, destinationView: AnyView(CarouselCardView())),
+        Category(name: "Farm Guess Game", imageName: "pawprint", color: .indigo, destinationView: AnyView(CardGameView())),
+    ]
+}
+
+struct Category: Hashable, Equatable {
+    let name: String
+    let imageName: String
+    let color: Color
+    let destinationView: AnyView
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(imageName)
+        hasher.combine(color)
+    }
+
+    static func == (lhs: Category, rhs: Category) -> Bool {
+        return lhs.name == rhs.name && lhs.imageName == rhs.imageName && lhs.color == rhs.color
+    }
+}

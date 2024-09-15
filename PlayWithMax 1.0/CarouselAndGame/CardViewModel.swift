@@ -75,6 +75,10 @@ class CardViewModel: ObservableObject {
         audioPlayer.playSound(mp3: animals[correctAnswer].name)
     }
     
+    func playTappedAnimal(animal: String) {
+        audioPlayer.playSound(mp3: animal)
+    }
+    
 }
 
 struct CardImageObject {

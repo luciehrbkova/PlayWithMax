@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
 //      MainMenuView()
-        TabMenuView()
+        CategoryTabView()
     }
 }
 
