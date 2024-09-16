@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CategoryTabView: View {
+    
+    var category: Category
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         TabView{
             CarouselCardView()
@@ -25,22 +29,30 @@ struct CategoryTabView: View {
             UITabBar.appearance().backgroundColor = .white
         }
         .accentColor(.teal)
+        .navigationTitle(category.name)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            // Customize the back button's appearance
+           ToolbarItem(placement: .navigationBarLeading) {
+               Button(action: {
+                   presentationMode.wrappedValue.dismiss()
+               }) {
+                   HStack {
+                       Image(systemName: "chevron.backward") // Custom back icon
+//                       Text("Back")
+                   }
+               }
+           }
+           
+           // Add a custom button to the top right corner
+           ToolbarItem(placement: .navigationBarTrailing) {
+               Button(action: {
+                   // Action for the button
+               }) {
+                   Image(systemName: "plus")
+               }
+           }
+        }
     }
-    
-    
-//    private func setupNavigationBarAppearance() {
-//        let appearance = UINavigationBarAppearance()
-//        appearance.configureWithOpaqueBackground()
-//        appearance.backgroundColor = UIColor.systemTeal // Change this to your desired color
-//        appearance.titleTextAttributes = [.foregroundColor: UIColor.white] // Set title text color
-//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white] // Set large title text color
-//
-//        UINavigationBar.appearance().standardAppearance = appearance
-//        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-//        UINavigationBar.appearance().compactAppearance = appearance
-//    }
-}
-
-#Preview {
-    CategoryTabView()
 }

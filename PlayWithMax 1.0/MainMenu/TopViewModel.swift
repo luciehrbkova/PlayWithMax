@@ -10,26 +10,25 @@ import SwiftUI
 
 class TopViewModel: ObservableObject {
     var categories: [Category] = [
-        Category(name: "Farm Animals", imageName: "farm1", color: .teal, destinationView: AnyView(CategoryTabView())),
-        Category(name: "Jungle Animals", imageName: "farm2", color: .indigo, destinationView: AnyView(CategoryTabView())),
-        Category(name: "Vehicles", imageName: "farm1", color: .purple, destinationView: AnyView(CategoryTabView())),
+        Category(name: "Farm Animals", backgroundImage: "farm1", color: .teal),
+        Category(name: "Jungle Animals", backgroundImage: "farm2", color: .indigo),
+        Category(name: "Vehicles", backgroundImage: "farm1", color: .purple),
         
     ]
 }
 
 struct Category: Hashable, Equatable {
     let name: String
-    let imageName: String
+    let backgroundImage: String
     let color: Color
-    let destinationView: AnyView
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
-        hasher.combine(imageName)
+        hasher.combine(backgroundImage)
         hasher.combine(color)
     }
 
     static func == (lhs: Category, rhs: Category) -> Bool {
-        return lhs.name == rhs.name && lhs.imageName == rhs.imageName && lhs.color == rhs.color
+        return lhs.name == rhs.name && lhs.backgroundImage == rhs.backgroundImage && lhs.color == rhs.color
     }
 }

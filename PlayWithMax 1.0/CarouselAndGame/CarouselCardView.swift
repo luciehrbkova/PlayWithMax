@@ -37,15 +37,14 @@ struct CarouselCardView: View {
                 .scrollIndicators(.hidden)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-               .background(
-                   Image("farm1")
-                       .resizable()
-                       .scaledToFill()
-                       .clipped()
-               )
-               .edgesIgnoringSafeArea(.all)
+           .background(
+               Image("farm1")
+                   .resizable()
+                   .scaledToFill()
+                   .clipped()
+           )
+           .edgesIgnoringSafeArea(.bottom)
         }
-        .navigationBarTitleDisplayMode(.large)
     }
 }
 

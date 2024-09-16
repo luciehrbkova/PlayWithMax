@@ -22,8 +22,8 @@ struct TopMenuView: View {
             ScrollView {
                 LazyVGrid(columns: UIDevice.current.userInterfaceIdiom == .pad ? columns : [GridItem(.flexible())], spacing: 20) {
                     ForEach(viewModel.categories, id: \.self) { category in
-                        NavigationLink(destination: category.destinationView) {
-                            categoryLinkView(header: category.name, backgroundImage: category.imageName)
+                        NavigationLink(destination: CategoryTabView(category: category)) {
+                            categoryLinkView(header: category.name, backgroundImage: category.backgroundImage)
                         }
                     }
                 }
@@ -43,7 +43,7 @@ struct TopMenuView: View {
                     Text(header)
                         .padding(8)
                         .background(Color.white.opacity(0.95)) // Lowered background opacity
-                        .foregroundColor(Color(.systemGray))
+                        .foregroundColor(Color(.label))
                         .cornerRadius(10)
                         .frame(maxHeight: 30, alignment: .leading)
                         .shadow(radius: 5)

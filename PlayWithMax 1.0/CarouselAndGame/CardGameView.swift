@@ -12,7 +12,6 @@ struct CardGameView: View {
     
     var body: some View {
         VStack {
-            Text("Guess Farm Animal")
             VStack {
                 FlipCardView(viewModel: viewModel,
                              sfSymbol: Image(systemName: "music.quarternote.3"))
@@ -31,16 +30,15 @@ struct CardGameView: View {
 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity) // Allow the view to expand to fill the screen
-           .background(
+            .background(
                Image("farm1")
                    .resizable()
                    .scaledToFill()
                    .clipped()
            )
-           .edgesIgnoringSafeArea(.all) // Optional to ensure it respects safe area
+           .edgesIgnoringSafeArea(.bottom) // Optional to ensure it respects safe area
            .padding(.horizontal, 50)
         }
-        .navigationBarTitleDisplayMode(.inline)
     }
     
     func choiceButton(animal: Image, number: Int, background: Color) -> some View {
