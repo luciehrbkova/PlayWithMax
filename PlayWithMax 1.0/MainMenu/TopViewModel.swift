@@ -10,8 +10,10 @@ import SwiftUI
 
 class TopViewModel: ObservableObject {
     var categories: [Category] = [
-        Category(name: "Farm Animals", imageName: "cat", color: .teal, destinationView: AnyView(CarouselCardView())),
-        Category(name: "Farm Guess Game", imageName: "pawprint", color: .indigo, destinationView: AnyView(CardGameView())),
+        Category(name: "Farm Animals", imageName: "farm1", color: .teal, destinationView: AnyView(CategoryTabView())),
+        Category(name: "Jungle Animals", imageName: "farm2", color: .indigo, destinationView: AnyView(CategoryTabView())),
+        Category(name: "Vehicles", imageName: "farm1", color: .purple, destinationView: AnyView(CategoryTabView())),
+        
     ]
 }
 
