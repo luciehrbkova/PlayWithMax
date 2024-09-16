@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct CarouselCardView: View {
+    
     @Environment(\.verticalSizeClass) var verticalSizeClass
+    var category: Category
     @State private var tappedImage: String?
-    @ObservedObject private var viewModel = CardViewModel()
+    @ObservedObject private var viewModel: CardViewModel
+    
+    init(category: Category) {
+          self.category = category
+        self.viewModel = CardViewModel(items: category.items)
+      }
     
     var body: some View {
         VStack {
@@ -48,6 +55,6 @@ struct CarouselCardView: View {
     }
 }
 
-#Preview {
-    CarouselCardView()
-}
+//#Preview {
+//    CarouselCardView()
+//}

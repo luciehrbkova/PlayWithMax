@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct CardGameView: View {
-    @ObservedObject private var viewModel = CardViewModel()
+    
+    var category: Category
+    @ObservedObject private var viewModel: CardViewModel
+    
+    init(category: Category) {
+        self.category = category
+        self.viewModel = CardViewModel(items: category.items)
+        }
     
     var body: some View {
         VStack {
@@ -60,6 +67,6 @@ struct CardGameView: View {
     }
 }
 
-#Preview {
-    CardGameView()
-}
+//#Preview {
+//    CardGameView()
+//}

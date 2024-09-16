@@ -10,10 +10,18 @@ import SwiftUI
 
 class TopViewModel: ObservableObject {
     var categories: [Category] = [
-        Category(name: "Farm Animals", backgroundImage: "farm1", color: .teal),
-        Category(name: "Jungle Animals", backgroundImage: "farm2", color: .indigo),
-        Category(name: "Vehicles", backgroundImage: "farm1", color: .purple),
-        
+        Category(name: "Farm Animals", 
+                 backgroundImage: "farm1",
+                 color: .teal, 
+                 items: ["pig", "cow", "sheep", "goat", "horse", "donkey", "cat", "dog", "rabbit", "chicken", "duck"]),
+        Category(name: "Jungle Animals", 
+                 backgroundImage: "farm2",
+                 color: .indigo,
+                 items: ["cat", "dog", "rabbit"]),
+        Category(name: "Vehicles",
+                 backgroundImage: "farm1",
+                 color: .purple,
+                 items: ["goat", "horse", "donkey"]),
     ]
 }
 
@@ -21,6 +29,7 @@ struct Category: Hashable, Equatable {
     let name: String
     let backgroundImage: String
     let color: Color
+    let items: [String]
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)

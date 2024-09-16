@@ -18,8 +18,8 @@ class CardViewModel: ObservableObject {
     @ObservedObject private var audioPlayer = AudioPlayer() // Instantiate audio player
     private let delay: Double = 0.3
     
-    init() {
-        self.animals = CardImageObject.DefaultImageSet()
+    init(items: [String]) {
+        self.animals = CardImageObject.createImageSet(items: items)
         self.correctAnswer = Int.random(in: 0...1)
         restartGame(delay: delay) // No need for any delay on the first run
     }
@@ -89,8 +89,9 @@ struct CardImageObject {
     let name: String
     let image: Image
     
-    static func DefaultImageSet() -> [CardImageObject] {
-            ["pig", "cow", "sheep", "goat", "horse", "donkey", "cat", "dog", "rabbit", "chicken", "duck"]
+    static func createImageSet(items: [String]) -> [CardImageObject] {
+        items
+//            ["pig", "cow", "sheep", "goat", "horse", "donkey", "cat", "dog", "rabbit", "chicken", "duck"]
                 .map { CardImageObject(name: $0) }
         }
 }

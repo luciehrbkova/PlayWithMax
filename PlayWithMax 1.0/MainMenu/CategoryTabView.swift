@@ -14,12 +14,12 @@ struct CategoryTabView: View {
     
     var body: some View {
         TabView{
-            CarouselCardView()
+            CarouselCardView(category: category)
                 .tabItem {
                     Image(systemName: "cat.fill")
                     Text("Animal Voices")
                 }
-            CardGameView()
+            CardGameView(category: category)
                     .tabItem {
                         Image(systemName: "hare")
                         Text("Guess Animal")
@@ -46,13 +46,13 @@ struct CategoryTabView: View {
            }
            
            // Add a custom button to the top right corner
-           ToolbarItem(placement: .navigationBarTrailing) {
-               Button(action: {
-                   // Action for the button
-               }) {
-                   Image(systemName: "plus")
-               }
-           }
+//           ToolbarItem(placement: .navigationBarTrailing) {
+//               Button(action: {
+//                   // Action for the button
+//               }) {
+//                   Image(systemName: "plus")
+//               }
+//           }
         }
     }
 }
