@@ -16,19 +16,19 @@ struct CategoryTabView: View {
         TabView{
             CarouselCardView(category: category)
                 .tabItem {
-                    Image(systemName: "cat.fill")
-                    Text("Animal Voices")
+                    Image(systemName: "square.3.layers.3d.down.left")
+                    Text("Voices")
                 }
             CardGameView(category: category)
-                    .tabItem {
-                        Image(systemName: "hare")
-                        Text("Guess Animal")
-                    }
+                .tabItem {
+                    Image(systemName: "questionmark.diamond")
+                    Text("Guess Game")
+                }
         }
         .onAppear() {
             UITabBar.appearance().backgroundColor = .white
         }
-        .accentColor(.teal)
+        .accentColor(.green)
         .navigationTitle(category.name)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)

@@ -38,7 +38,7 @@ struct CardGameView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity) // Allow the view to expand to fill the screen
             .background(
-               Image("farm1")
+                Image(category.backgroundImage)
                    .resizable()
                    .scaledToFill()
                    .clipped()

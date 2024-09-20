@@ -45,7 +45,7 @@ struct CarouselCardView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
            .background(
-               Image("farm1")
+            Image(category.backgroundImage)
                    .resizable()
                    .scaledToFill()
                    .clipped()

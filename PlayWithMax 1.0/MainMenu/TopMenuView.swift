@@ -29,7 +29,9 @@ struct TopMenuView: View {
                 }
                 .padding()
             }
+//            .background(Color(.white))
             .navigationTitle("Play With Max")
+
         }
     }
     
@@ -42,8 +44,8 @@ struct TopMenuView: View {
                 HStack{
                     Text(header)
                         .padding(8)
+                        .foregroundColor(.primary)
                         .background(Color.white.opacity(0.95)) // Lowered background opacity
-                        .foregroundColor(Color(.label))
                         .cornerRadius(10)
                         .frame(maxHeight: 30, alignment: .leading)
                         .shadow(radius: 5)

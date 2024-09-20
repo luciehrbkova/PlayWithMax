@@ -15,13 +15,13 @@ class TopViewModel: ObservableObject {
                  color: .teal, 
                  items: ["pig", "cow", "sheep", "goat", "horse", "donkey", "cat", "dog", "rabbit", "chicken", "duck"]),
         Category(name: "Jungle Animals", 
-                 backgroundImage: "farm2",
+                 backgroundImage: "jungle",
                  color: .indigo,
-                 items: ["cat", "dog", "rabbit"]),
+                 items: ["tiger", "monkey", "giraffe", "elephant", "lion", "crocodile", "snake", "panda", "zebra", "antelope"]),
         Category(name: "Vehicles",
-                 backgroundImage: "farm1",
+                 backgroundImage: "city2",
                  color: .purple,
-                 items: ["goat", "horse", "donkey"]),
+                 items: ["bus", "boat", "ballon", "taxi", "plane", "truck", "police", "fireengine", "ambulance", "bagr"]),
     ]
 }
 
