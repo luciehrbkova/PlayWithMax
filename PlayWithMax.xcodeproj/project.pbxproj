@@ -56,6 +56,7 @@
 		18DC78A02CA1718E00E2BAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC789F2CA1718E00E2BAF4 /* Assets.xcassets */; };
 		18DC78A22CA17A6C00E2BAF4 /* FarmAnimals.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC78A12CA17A6C00E2BAF4 /* FarmAnimals.xcassets */; };
 		18DC78A42CA17AE800E2BAF4 /* JungleAnimals.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC78A32CA17AE800E2BAF4 /* JungleAnimals.xcassets */; };
+		18DC78A62CA181DE00E2BAF4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC78A52CA181DE00E2BAF4 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,7 @@
 		18DC789F2CA1718E00E2BAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PlayWithMax/Assets.xcassets; sourceTree = "<group>"; };
 		18DC78A12CA17A6C00E2BAF4 /* FarmAnimals.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FarmAnimals.xcassets; sourceTree = "<group>"; };
 		18DC78A32CA17AE800E2BAF4 /* JungleAnimals.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JungleAnimals.xcassets; sourceTree = "<group>"; };
+		18DC78A52CA181DE00E2BAF4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				18DC78362CA1709B00E2BAF4 /* Vehicles.xcassets */,
 				18DC789D2CA1714700E2BAF4 /* Launch Screen.storyboard */,
 				18DC789B2CA1713B00E2BAF4 /* Preview Content */,
+				18DC78A52CA181DE00E2BAF4 /* Color.swift */,
 			);
 			name = PlayWithMax;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				18DC784D2CA170D900E2BAF4 /* CardViewModel.swift in Sources */,
 				18DC78402CA170CC00E2BAF4 /* CategoryTabView.swift in Sources */,
 				18DC78942CA1711900E2BAF4 /* ImageView.swift in Sources */,
+				18DC78A62CA181DE00E2BAF4 /* Color.swift in Sources */,
 				18DC78422CA170CC00E2BAF4 /* TopViewModel.swift in Sources */,
 				18DC78392CA170A900E2BAF4 /* PlayWithMaxApp.swift in Sources */,
 				18DC784A2CA170D900E2BAF4 /* CardView.swift in Sources */,

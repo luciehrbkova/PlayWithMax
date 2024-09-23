@@ -28,7 +28,7 @@ struct CategoryTabView: View {
         .onAppear() {
             UITabBar.appearance().backgroundColor = .white
         }
-        .accentColor(.green)
+        .accentColor(ColorPalette.forestGreen)
         .navigationTitle(category.name)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)

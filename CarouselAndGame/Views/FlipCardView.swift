@@ -86,7 +86,7 @@ struct CardBack : View {
             sfSymbol
                 .resizable()
                 .frame(width: 80, height: 80)
-                .foregroundColor(.teal)
+                .foregroundColor(ColorPalette.forestGreen)
                 .symbolEffect(.bounce, options: .speed(3).repeat(3), value: animate)
 
         }.rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
