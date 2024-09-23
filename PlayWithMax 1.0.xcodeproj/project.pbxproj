@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180A7C252C7F1246009AD6E1 /* CategoryTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A7C242C7F1246009AD6E1 /* CategoryTabView.swift */; };
-		18944E522C52ED8D0055DF9F /* PlayWithMax_1_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */; };
+		18944E522C52ED8D0055DF9F /* PlayWithMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E512C52ED8D0055DF9F /* PlayWithMaxApp.swift */; };
 		18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18944E532C52ED8D0055DF9F /* ContentView.swift */; };
 		18944E562C52ED8F0055DF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18944E552C52ED8F0055DF9F /* Assets.xcassets */; };
 		18944E592C52ED8F0055DF9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18944E582C52ED8F0055DF9F /* Preview Assets.xcassets */; };
@@ -60,7 +60,7 @@
 /* Begin PBXFileReference section */
 		180A7C242C7F1246009AD6E1 /* CategoryTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTabView.swift; sourceTree = "<group>"; };
 		18944E4E2C52ED8D0055DF9F /* PlayWithMax 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlayWithMax 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithMax_1_0App.swift; sourceTree = "<group>"; };
+		18944E512C52ED8D0055DF9F /* PlayWithMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithMaxApp.swift; sourceTree = "<group>"; };
 		18944E532C52ED8D0055DF9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18944E552C52ED8F0055DF9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18944E582C52ED8F0055DF9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		18944E502C52ED8D0055DF9F /* PlayWithMax 1.0 */ = {
 			isa = PBXGroup;
 			children = (
-				18944E512C52ED8D0055DF9F /* PlayWithMax_1_0App.swift */,
+				18944E512C52ED8D0055DF9F /* PlayWithMaxApp.swift */,
 				18944E532C52ED8D0055DF9F /* ContentView.swift */,
 				18944F142C5C37460055DF9F /* MainMenu */,
 				18C463142C94B397007CE262 /* CarouselAndGame */,
@@ -366,7 +366,7 @@
 				18C4631F2C971BA7007CE262 /* TopViewModel.swift in Sources */,
 				18C463162C94B3B8007CE262 /* CarouselCardView.swift in Sources */,
 				18944E542C52ED8D0055DF9F /* ContentView.swift in Sources */,
-				18944E522C52ED8D0055DF9F /* PlayWithMax_1_0App.swift in Sources */,
+				18944E522C52ED8D0055DF9F /* PlayWithMaxApp.swift in Sources */,
 				18944F192C6266800055DF9F /* FlipCardView.swift in Sources */,
 				18944E632C52FC3B0055DF9F /* AudioPlayer.swift in Sources */,
 				18C4631A2C94B3D9007CE262 /* CardViewModel.swift in Sources */,

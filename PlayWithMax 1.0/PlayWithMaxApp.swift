@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct PlayWithMax_1_0App: App {
+struct PlayWithMaxApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
