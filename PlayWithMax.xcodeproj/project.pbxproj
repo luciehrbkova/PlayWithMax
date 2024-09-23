@@ -59,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		180A7C242C7F1246009AD6E1 /* CategoryTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTabView.swift; sourceTree = "<group>"; };
-		18944E4E2C52ED8D0055DF9F /* PlayWithMax 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlayWithMax 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18944E4E2C52ED8D0055DF9F /* PlayWithMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18944E512C52ED8D0055DF9F /* PlayWithMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithMaxApp.swift; sourceTree = "<group>"; };
 		18944E532C52ED8D0055DF9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18944E552C52ED8F0055DF9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		18944E452C52ED8D0055DF9F = {
 			isa = PBXGroup;
 			children = (
-				18944E502C52ED8D0055DF9F /* PlayWithMax 1.0 */,
+				18944E502C52ED8D0055DF9F /* PlayWithMax */,
 				18944E4F2C52ED8D0055DF9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,12 +131,12 @@
 		18944E4F2C52ED8D0055DF9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18944E4E2C52ED8D0055DF9F /* PlayWithMax 1.0.app */,
+				18944E4E2C52ED8D0055DF9F /* PlayWithMax.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18944E502C52ED8D0055DF9F /* PlayWithMax 1.0 */ = {
+		18944E502C52ED8D0055DF9F /* PlayWithMax */ = {
 			isa = PBXGroup;
 			children = (
 				18944E512C52ED8D0055DF9F /* PlayWithMaxApp.swift */,
@@ -152,7 +152,7 @@
 				18944E572C52ED8F0055DF9F /* Preview Content */,
 				18E5D37D2C9C887C00E0F1E7 /* Launch Screen.storyboard */,
 			);
-			path = "PlayWithMax 1.0";
+			name = PlayWithMax;
 			sourceTree = "<group>";
 		};
 		18944E572C52ED8F0055DF9F /* Preview Content */ = {
@@ -258,9 +258,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18944E4D2C52ED8D0055DF9F /* PlayWithMax 1.0 */ = {
+		18944E4D2C52ED8D0055DF9F /* PlayWithMax */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18944E5C2C52ED8F0055DF9F /* Build configuration list for PBXNativeTarget "PlayWithMax 1.0" */;
+			buildConfigurationList = 18944E5C2C52ED8F0055DF9F /* Build configuration list for PBXNativeTarget "PlayWithMax" */;
 			buildPhases = (
 				18944E4A2C52ED8D0055DF9F /* Sources */,
 				18944E4B2C52ED8D0055DF9F /* Frameworks */,
@@ -270,9 +270,9 @@
 			);
 			dependencies = (
 			);
-			name = "PlayWithMax 1.0";
+			name = PlayWithMax;
 			productName = "PlayWithMax 1.0";
-			productReference = 18944E4E2C52ED8D0055DF9F /* PlayWithMax 1.0.app */;
+			productReference = 18944E4E2C52ED8D0055DF9F /* PlayWithMax.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -290,7 +290,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 18944E492C52ED8D0055DF9F /* Build configuration list for PBXProject "PlayWithMax 1.0" */;
+			buildConfigurationList = 18944E492C52ED8D0055DF9F /* Build configuration list for PBXProject "PlayWithMax" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -303,7 +303,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18944E4D2C52ED8D0055DF9F /* PlayWithMax 1.0 */,
+				18944E4D2C52ED8D0055DF9F /* PlayWithMax */,
 			);
 		};
 /* End PBXProject section */
@@ -504,7 +504,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PlayWithMax 1.0/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PlayWithMax/Preview Content\"";
 				DEVELOPMENT_TEAM = 9BTDG64AN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -520,7 +520,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.lucieweb.PlayWithMax-1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lucieweb.PlayWithMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -538,7 +538,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PlayWithMax 1.0/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PlayWithMax/Preview Content\"";
 				DEVELOPMENT_TEAM = 9BTDG64AN5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -554,7 +554,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.lucieweb.PlayWithMax-1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.lucieweb.PlayWithMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -567,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18944E492C52ED8D0055DF9F /* Build configuration list for PBXProject "PlayWithMax 1.0" */ = {
+		18944E492C52ED8D0055DF9F /* Build configuration list for PBXProject "PlayWithMax" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18944E5A2C52ED8F0055DF9F /* Debug */,
@@ -576,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18944E5C2C52ED8F0055DF9F /* Build configuration list for PBXNativeTarget "PlayWithMax 1.0" */ = {
+		18944E5C2C52ED8F0055DF9F /* Build configuration list for PBXNativeTarget "PlayWithMax" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18944E5D2C52ED8F0055DF9F /* Debug */,
