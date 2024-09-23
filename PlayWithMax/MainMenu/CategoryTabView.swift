@@ -13,7 +13,7 @@ struct CategoryTabView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        TabView{
+        TabView {
             CarouselCardView(category: category)
                 .tabItem {
                     Image(systemName: "square.3.layers.3d.down.left")
@@ -45,6 +45,7 @@ struct CategoryTabView: View {
                }
            }
            
+    // TODO: add pdf generator/
            // Add a custom button to the top right corner
 //           ToolbarItem(placement: .navigationBarTrailing) {
 //               Button(action: {

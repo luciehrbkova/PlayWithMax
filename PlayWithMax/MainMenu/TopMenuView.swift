@@ -15,6 +15,7 @@ struct TopMenuView: View {
         NavigationView {
             // Use a LazyVGrid to create a grid layout
             let columns = [
+                // TODO: multiple items for iPad
 //                GridItem(.flexible()),  // Flexible width for each column
                 GridItem(.flexible())
             ]
@@ -29,7 +30,6 @@ struct TopMenuView: View {
                 }
                 .padding()
             }
-//            .background(Color(.white))
             .navigationTitle("Play With Max")
 
         }

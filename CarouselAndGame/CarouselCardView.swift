@@ -9,10 +9,10 @@ import SwiftUI
 
 struct CarouselCardView: View {
     
+    @ObservedObject private var viewModel: CardViewModel
+    @State private var tappedImage: String?
     @Environment(\.verticalSizeClass) var verticalSizeClass
     var category: Category
-    @State private var tappedImage: String?
-    @ObservedObject private var viewModel: CardViewModel
     
     init(category: Category) {
           self.category = category

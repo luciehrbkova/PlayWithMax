@@ -51,10 +51,11 @@
 		18DC78902CA170F200E2BAF4 /* truck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18DC786F2CA170F200E2BAF4 /* truck.mp3 */; };
 		18DC78922CA1710E00E2BAF4 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC78912CA1710E00E2BAF4 /* AudioPlayer.swift */; };
 		18DC78942CA1711900E2BAF4 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC78932CA1711900E2BAF4 /* ImageView.swift */; };
-		18DC78992CA1712F00E2BAF4 /* tigerSun.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DC78982CA1712F00E2BAF4 /* tigerSun.png */; };
 		18DC789C2CA1713B00E2BAF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC789A2CA1713B00E2BAF4 /* Preview Assets.xcassets */; };
 		18DC789E2CA1714700E2BAF4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DC789D2CA1714700E2BAF4 /* Launch Screen.storyboard */; };
 		18DC78A02CA1718E00E2BAF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC789F2CA1718E00E2BAF4 /* Assets.xcassets */; };
+		18DC78A22CA17A6C00E2BAF4 /* FarmAnimals.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC78A12CA17A6C00E2BAF4 /* FarmAnimals.xcassets */; };
+		18DC78A42CA17AE800E2BAF4 /* JungleAnimals.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC78A32CA17AE800E2BAF4 /* JungleAnimals.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,10 +104,11 @@
 		18DC786F2CA170F200E2BAF4 /* truck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = truck.mp3; sourceTree = "<group>"; };
 		18DC78912CA1710E00E2BAF4 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = PlayWithMax/AudioPlayer.swift; sourceTree = "<group>"; };
 		18DC78932CA1711900E2BAF4 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageView.swift; path = PlayWithMax/ImageView.swift; sourceTree = "<group>"; };
-		18DC78982CA1712F00E2BAF4 /* tigerSun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tigerSun.png; path = PlayWithMax/tigerSun.png; sourceTree = "<group>"; };
 		18DC789A2CA1713B00E2BAF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18DC789D2CA1714700E2BAF4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		18DC789F2CA1718E00E2BAF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PlayWithMax/Assets.xcassets; sourceTree = "<group>"; };
+		18DC78A12CA17A6C00E2BAF4 /* FarmAnimals.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FarmAnimals.xcassets; sourceTree = "<group>"; };
+		18DC78A32CA17AE800E2BAF4 /* JungleAnimals.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JungleAnimals.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +149,9 @@
 				18DC78912CA1710E00E2BAF4 /* AudioPlayer.swift */,
 				18DC78932CA1711900E2BAF4 /* ImageView.swift */,
 				18DC789F2CA1718E00E2BAF4 /* Assets.xcassets */,
+				18DC78A32CA17AE800E2BAF4 /* JungleAnimals.xcassets */,
+				18DC78A12CA17A6C00E2BAF4 /* FarmAnimals.xcassets */,
 				18DC78362CA1709B00E2BAF4 /* Vehicles.xcassets */,
-				18DC78982CA1712F00E2BAF4 /* tigerSun.png */,
 				18DC789D2CA1714700E2BAF4 /* Launch Screen.storyboard */,
 				18DC789B2CA1713B00E2BAF4 /* Preview Content */,
 			);
@@ -322,6 +325,7 @@
 				18DC78372CA1709B00E2BAF4 /* Vehicles.xcassets in Resources */,
 				18DC78772CA170F200E2BAF4 /* duck.mp3 in Resources */,
 				18DC78822CA170F200E2BAF4 /* monkey.mp3 in Resources */,
+				18DC78A22CA17A6C00E2BAF4 /* FarmAnimals.xcassets in Resources */,
 				18DC78812CA170F200E2BAF4 /* lion.mp3 in Resources */,
 				18DC787B2CA170F200E2BAF4 /* rabbit.mp3 in Resources */,
 				18DC787C2CA170F200E2BAF4 /* sheep.mp3 in Resources */,
@@ -340,8 +344,8 @@
 				18DC787D2CA170F200E2BAF4 /* antelope.mp3 in Resources */,
 				18DC78892CA170F200E2BAF4 /* ballon.mp3 in Resources */,
 				18DC788A2CA170F200E2BAF4 /* boat.mp3 in Resources */,
-				18DC78992CA1712F00E2BAF4 /* tigerSun.png in Resources */,
 				18DC78852CA170F200E2BAF4 /* tiger.mp3 in Resources */,
+				18DC78A42CA17AE800E2BAF4 /* JungleAnimals.xcassets in Resources */,
 				18DC78752CA170F200E2BAF4 /* dog.mp3 in Resources */,
 				18DC78842CA170F200E2BAF4 /* snake.mp3 in Resources */,
 				18DC78A02CA1718E00E2BAF4 /* Assets.xcassets in Resources */,
@@ -522,7 +526,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.lucieweb.PlayWithMax;
+				PRODUCT_BUNDLE_IDENTIFIER = luciehrbkova.PlayWithMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -556,7 +560,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.lucieweb.PlayWithMax;
+				PRODUCT_BUNDLE_IDENTIFIER = luciehrbkova.PlayWithMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

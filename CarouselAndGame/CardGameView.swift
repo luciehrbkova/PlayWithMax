@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CardGameView: View {
     
-    var category: Category
     @ObservedObject private var viewModel: CardViewModel
+    var category: Category
     
     init(category: Category) {
         self.category = category
