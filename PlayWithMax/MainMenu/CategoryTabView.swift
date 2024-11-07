@@ -26,7 +26,7 @@ struct CategoryTabView: View {
                 }
         }
         .onAppear() {
-            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().backgroundColor = .systemBackground
         }
         .accentColor(ColorPalette.forestGreen)
         .navigationTitle(category.name)
