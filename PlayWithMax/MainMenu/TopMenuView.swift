@@ -44,7 +44,7 @@ struct TopMenuView: View {
                 HStack{
                     Text(header)
                         .padding(8)
-                        .foregroundColor(.primary)
+                        .foregroundColor(.black)
                         .background(Color.white.opacity(0.95)) // Lowered background opacity
                         .cornerRadius(10)
                         .frame(maxHeight: 30, alignment: .leading)
