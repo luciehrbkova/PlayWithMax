@@ -47,13 +47,36 @@ struct CategoryTabView: View {
            
     // TODO: add pdf generator/
            // Add a custom button to the top right corner
-//           ToolbarItem(placement: .navigationBarTrailing) {
-//               Button(action: {
-//                   // Action for the button
-//               }) {
-//                   Image(systemName: "plus")
-//               }
-//           }
+           ToolbarItem(placement: .navigationBarTrailing) {
+               Button(action: {
+                 // Load the PDF document
+                   if let pdfURL = Bundle.main.url(forResource: category.name, withExtension: "pdf") {
+                     // Choose between share and print options
+                     presentShareOrPrintOptions(pdfURL: pdfURL)
+                 } else {
+                     print("PDF document not found.")
+                 }
+             }) {
+                 Image(systemName: "square.and.arrow.up")
+             }
+           }
+        }
+    }
+    
+    // Helper function to present share and print options
+    func presentShareOrPrintOptions(pdfURL: URL) {
+        let activityViewController = UIActivityViewController(activityItems: [pdfURL], applicationActivities: nil)
+
+        // Present the activity view controller for sharing
+        if let topController = UIApplication.shared.windows.first?.rootViewController {
+            topController.present(activityViewController, animated: true, completion: nil)
+        }
+
+        // Print functionality can be separate or incorporated into the share sheet as well.
+        if UIPrintInteractionController.isPrintingAvailable {
+            let printController = UIPrintInteractionController.shared
+            printController.printingItem = pdfURL
+            printController.present(animated: true, completionHandler: nil)
         }
     }
 }

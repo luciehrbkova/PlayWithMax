@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18CE53AA2CDE273D00822F3C /* Farm Animals.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 18CE53A92CDE273D00822F3C /* Farm Animals.pdf */; };
+		18CE53AC2CDE299B00822F3C /* Vehicles.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 18CE53AB2CDE299A00822F3C /* Vehicles.pdf */; };
+		18CE53AE2CDE29E500822F3C /* Jungle Animals.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 18CE53AD2CDE29E500822F3C /* Jungle Animals.pdf */; };
 		18DC78372CA1709B00E2BAF4 /* Vehicles.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC78362CA1709B00E2BAF4 /* Vehicles.xcassets */; };
 		18DC78392CA170A900E2BAF4 /* PlayWithMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC78382CA170A900E2BAF4 /* PlayWithMaxApp.swift */; };
 		18DC783B2CA170BC00E2BAF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC783A2CA170BC00E2BAF4 /* ContentView.swift */; };
@@ -61,6 +64,9 @@
 
 /* Begin PBXFileReference section */
 		18944E4E2C52ED8D0055DF9F /* PlayWithMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CE53A92CDE273D00822F3C /* Farm Animals.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Farm Animals.pdf"; sourceTree = "<group>"; };
+		18CE53AB2CDE299A00822F3C /* Vehicles.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Vehicles.pdf; sourceTree = "<group>"; };
+		18CE53AD2CDE29E500822F3C /* Jungle Animals.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Jungle Animals.pdf"; sourceTree = "<group>"; };
 		18DC78362CA1709B00E2BAF4 /* Vehicles.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Vehicles.xcassets; path = PlayWithMax/Vehicles.xcassets; sourceTree = "<group>"; };
 		18DC78382CA170A900E2BAF4 /* PlayWithMaxApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayWithMaxApp.swift; path = PlayWithMax/PlayWithMaxApp.swift; sourceTree = "<group>"; };
 		18DC783A2CA170BC00E2BAF4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = PlayWithMax/ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				18DC783A2CA170BC00E2BAF4 /* ContentView.swift */,
 				18DC783F2CA170CC00E2BAF4 /* MainMenu */,
 				18DC78492CA170D900E2BAF4 /* CarouselAndGame */,
+				18CE53A62CDE26AC00822F3C /* PDF */,
 				18DC78712CA170F200E2BAF4 /* Sounds */,
 				18DC78912CA1710E00E2BAF4 /* AudioPlayer.swift */,
 				18DC78932CA1711900E2BAF4 /* ImageView.swift */,
@@ -159,6 +166,16 @@
 				18DC78A52CA181DE00E2BAF4 /* Color.swift */,
 			);
 			name = PlayWithMax;
+			sourceTree = "<group>";
+		};
+		18CE53A62CDE26AC00822F3C /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				18CE53AB2CDE299A00822F3C /* Vehicles.pdf */,
+				18CE53A92CDE273D00822F3C /* Farm Animals.pdf */,
+				18CE53AD2CDE29E500822F3C /* Jungle Animals.pdf */,
+			);
+			path = PDF;
 			sourceTree = "<group>";
 		};
 		18DC783F2CA170CC00E2BAF4 /* MainMenu */ = {
@@ -340,7 +357,9 @@
 				18DC78882CA170F200E2BAF4 /* bagr.mp3 in Resources */,
 				18DC788F2CA170F200E2BAF4 /* taxi.mp3 in Resources */,
 				18DC78782CA170F200E2BAF4 /* goat.mp3 in Resources */,
+				18CE53AA2CDE273D00822F3C /* Farm Animals.pdf in Resources */,
 				18DC789E2CA1714700E2BAF4 /* Launch Screen.storyboard in Resources */,
+				18CE53AC2CDE299B00822F3C /* Vehicles.pdf in Resources */,
 				18DC78762CA170F200E2BAF4 /* donkey.mp3 in Resources */,
 				18DC78872CA170F200E2BAF4 /* ambulance.mp3 in Resources */,
 				18DC787A2CA170F200E2BAF4 /* pig.mp3 in Resources */,
@@ -355,6 +374,7 @@
 				18DC78802CA170F200E2BAF4 /* giraffe.mp3 in Resources */,
 				18DC788B2CA170F200E2BAF4 /* bus.mp3 in Resources */,
 				18DC78742CA170F200E2BAF4 /* cow.mp3 in Resources */,
+				18CE53AE2CDE29E500822F3C /* Jungle Animals.pdf in Resources */,
 				18DC788C2CA170F200E2BAF4 /* fireengine.mp3 in Resources */,
 				18DC78722CA170F200E2BAF4 /* cat.mp3 in Resources */,
 				18DC78902CA170F200E2BAF4 /* truck.mp3 in Resources */,
@@ -529,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = luciehrbkova.PlayWithMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -563,7 +583,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = luciehrbkova.PlayWithMax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
