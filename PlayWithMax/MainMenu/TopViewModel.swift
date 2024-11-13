@@ -22,6 +22,10 @@ class TopViewModel: ObservableObject {
                  backgroundImage: "city2",
                  color: .purple,
                  items: ["bus", "boat", "ballon", "taxi", "plane", "truck", "police", "fireengine", "ambulance", "bagr"]),
+        Category(name: "Music Instruments",
+                 backgroundImage: "music",
+                 color: .pink,
+                 items: ["trumpet", "saxophone", "drum", "guitar", "flute", "bell", "harph", "piano", "tamburine", "violin"])
     ]
 }
 
