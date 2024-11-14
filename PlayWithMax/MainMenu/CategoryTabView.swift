@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct CategoryTabView: View {
+    @State private var selectedTab: Int = 0
     
     var category: Category
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        TabView {
-            CarouselCardView(category: category)
+        TabView (selection: $selectedTab) {
+            CarouselCardView(category: category, selectedTab: $selectedTab)
                 .tabItem {
                     Image(systemName: "square.3.layers.3d.down.left")
                     Text("Voices")
                 }
-            CardGameView(category: category)
+                .tag(0)
+            CardGameView(category: category, selectedTab: $selectedTab)
                 .tabItem {
                     Image(systemName: "questionmark.diamond")
                     Text("Guess Game")
                 }
+                .tag(1)
         }
         .onAppear() {
             UITabBar.appearance().backgroundColor = .systemBackground
