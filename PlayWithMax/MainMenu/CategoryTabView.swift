@@ -60,7 +60,7 @@ struct CategoryTabView: View {
                      print("PDF document not found.")
                  }
              }) {
-                 Image(systemName: "square.and.arrow.up")
+                 Image(systemName: "printer")
              }
            }
         }
