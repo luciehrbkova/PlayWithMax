@@ -79,6 +79,10 @@ class CardViewModel: ObservableObject {
         audioPlayer.playSound(mp3: animal)
     }
     
+    func stopSound() {
+        audioPlayer.stopSound()
+    }
+    
 }
 
 struct CardImageObject {

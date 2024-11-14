@@ -28,4 +28,8 @@ class AudioPlayer: ObservableObject {
             print("Error loading sound file: \(error)")
         }
     }
+    
+    func stopSound() {
+        player?.stop()
+    }
 }

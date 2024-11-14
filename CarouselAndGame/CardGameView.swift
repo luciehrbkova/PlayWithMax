@@ -10,10 +10,13 @@ import SwiftUI
 struct CardGameView: View {
     
     @ObservedObject private var viewModel: CardViewModel
+    @Binding var selectedTab: Int // Add a binding to the selected tab
     var category: Category
     
-    init(category: Category) {
+    init(category: Category,
+        selectedTab: Binding<Int>) {
         self.category = category
+        self._selectedTab = selectedTab
         self.viewModel = CardViewModel(items: category.items)
         }
     
@@ -46,6 +49,11 @@ struct CardGameView: View {
            .edgesIgnoringSafeArea(.bottom) // Optional to ensure it respects safe area
            .padding(.horizontal, 50)
         }
+        .onChange(of: selectedTab) { newTab in
+           if newTab != 1 {
+               viewModel.stopSound()
+           }
+       }
     }
     
     func choiceButton(animal: Image, number: Int, background: Color) -> some View {

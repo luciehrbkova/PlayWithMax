@@ -21,7 +21,7 @@
 		18CE53C22CE244B500822F3C /* saxophone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18CE53BF2CE244B500822F3C /* saxophone.mp3 */; };
 		18CE53C32CE244B500822F3C /* tamburine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18CE53C02CE244B500822F3C /* tamburine.mp3 */; };
 		18CE53C52CE244B900822F3C /* piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18CE53C42CE244B900822F3C /* piano.mp3 */; };
-		18CE53C72CE245A100822F3C /* Music Instrument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 18CE53C62CE245A100822F3C /* Music Instrument.pdf */; };
+		18CE53C92CE669BD00822F3C /* Music Instruments.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 18CE53C82CE669BD00822F3C /* Music Instruments.pdf */; };
 		18DC78372CA1709B00E2BAF4 /* Vehicles.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DC78362CA1709B00E2BAF4 /* Vehicles.xcassets */; };
 		18DC78392CA170A900E2BAF4 /* PlayWithMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC78382CA170A900E2BAF4 /* PlayWithMaxApp.swift */; };
 		18DC783B2CA170BC00E2BAF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC783A2CA170BC00E2BAF4 /* ContentView.swift */; };
@@ -90,7 +90,7 @@
 		18CE53BF2CE244B500822F3C /* saxophone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = saxophone.mp3; sourceTree = "<group>"; };
 		18CE53C02CE244B500822F3C /* tamburine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tamburine.mp3; sourceTree = "<group>"; };
 		18CE53C42CE244B900822F3C /* piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano.mp3; sourceTree = "<group>"; };
-		18CE53C62CE245A100822F3C /* Music Instrument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Music Instrument.pdf"; sourceTree = "<group>"; };
+		18CE53C82CE669BD00822F3C /* Music Instruments.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Music Instruments.pdf"; path = "../../../Downloads/Music Instruments.pdf"; sourceTree = "<group>"; };
 		18DC78362CA1709B00E2BAF4 /* Vehicles.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Vehicles.xcassets; path = PlayWithMax/Vehicles.xcassets; sourceTree = "<group>"; };
 		18DC78382CA170A900E2BAF4 /* PlayWithMaxApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayWithMaxApp.swift; path = PlayWithMax/PlayWithMaxApp.swift; sourceTree = "<group>"; };
 		18DC783A2CA170BC00E2BAF4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = PlayWithMax/ContentView.swift; sourceTree = "<group>"; };
@@ -197,8 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				18CE53AB2CDE299A00822F3C /* Vehicles.pdf */,
-				18CE53C62CE245A100822F3C /* Music Instrument.pdf */,
 				18CE53A92CDE273D00822F3C /* Farm Animals.pdf */,
+				18CE53C82CE669BD00822F3C /* Music Instruments.pdf */,
 				18CE53AD2CDE29E500822F3C /* Jungle Animals.pdf */,
 			);
 			path = PDF;
@@ -384,7 +384,6 @@
 			files = (
 				18DC78792CA170F200E2BAF4 /* horse.mp3 in Resources */,
 				18DC788E2CA170F200E2BAF4 /* police.mp3 in Resources */,
-				18CE53C72CE245A100822F3C /* Music Instrument.pdf in Resources */,
 				18DC78732CA170F200E2BAF4 /* chicken.mp3 in Resources */,
 				18DC787E2CA170F200E2BAF4 /* crocodile.mp3 in Resources */,
 				18DC78372CA1709B00E2BAF4 /* Vehicles.xcassets in Resources */,
@@ -429,6 +428,7 @@
 				18DC788B2CA170F200E2BAF4 /* bus.mp3 in Resources */,
 				18CE53BD2CE244AC00822F3C /* violin.mp3 in Resources */,
 				18DC78742CA170F200E2BAF4 /* cow.mp3 in Resources */,
+				18CE53C92CE669BD00822F3C /* Music Instruments.pdf in Resources */,
 				18CE53AE2CDE29E500822F3C /* Jungle Animals.pdf in Resources */,
 				18DC788C2CA170F200E2BAF4 /* fireengine.mp3 in Resources */,
 				18DC78722CA170F200E2BAF4 /* cat.mp3 in Resources */,

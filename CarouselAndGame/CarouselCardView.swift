@@ -11,11 +11,15 @@ struct CarouselCardView: View {
     
     @ObservedObject private var viewModel: CardViewModel
     @State private var tappedImage: String?
+    @Binding var selectedTab: Int // Add a binding to the selected tab
     @Environment(\.verticalSizeClass) var verticalSizeClass
     var category: Category
     
-    init(category: Category) {
-          self.category = category
+    init(category: Category,
+         selectedTab: Binding<Int>
+        ) {
+        self.category = category
+        self._selectedTab = selectedTab
         self.viewModel = CardViewModel(items: category.items)
       }
     
@@ -32,6 +36,7 @@ struct CarouselCardView: View {
                                         tappedImage = tappedImage == animal.name ? nil : animal.name
                                     }
                                     print(animal.name)
+                                    print(selectedTab)
                                 }
                         }
                         
@@ -51,6 +56,11 @@ struct CarouselCardView: View {
                    .clipped()
            )
            .edgesIgnoringSafeArea(.bottom)
+        }
+        .onChange(of: selectedTab) { newTab in
+            if newTab != 0 {
+                viewModel.stopSound() // Stop sound if the selected tab is not the current tab
+            }
         }
     }
 }

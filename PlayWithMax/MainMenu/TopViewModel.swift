@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 class TopViewModel: ObservableObject {
+    
+    @ObservedObject private var audioPlayer = AudioPlayer() // Instantiate audio player
+    
     var categories: [Category] = [
         Category(name: "Farm Animals", 
                  backgroundImage: "farm1",
@@ -27,6 +30,10 @@ class TopViewModel: ObservableObject {
                  color: .pink,
                  items: ["trumpet", "saxophone", "drum", "guitar", "flute", "bell", "harph", "piano", "tamburine", "violin"])
     ]
+    
+    func stopSound() {
+        audioPlayer.stopSound()
+    }
 }
 
 struct Category: Hashable, Equatable {

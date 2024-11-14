@@ -33,6 +33,9 @@ struct TopMenuView: View {
             .navigationTitle("Play With Max")
 
         }
+        .onAppear {
+            viewModel.stopSound()
+        }
     }
     
     func categoryLinkView(header: String, backgroundImage: String) -> some View  {
